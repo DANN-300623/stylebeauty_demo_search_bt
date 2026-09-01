@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galerija | STIL Beauty Salon</title>
+
+    <meta name="description" content="Pogledajte galeriju STIL Beauty Salona — detalje salona, nokte, tretmane i beauty trenutke.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo" aria-label="STIL Beauty Salon - Početna">
+
+            <span class="logo-main">
+                STIL
+            </span>
+
+            <span class="logo-sub">
+                beauty & care
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="index.html" class="nav-link">
+                Početna
+            </a>
+
+
+            <div class="nav-dropdown">
+
+                <a href="usluge.html" class="nav-link dropdown-trigger">
+
+                    Usluge
+
+                    <span class="dropdown-arrow">
+                        ⌄
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="nega-lica.html">
+                        Nega lica
+                    </a>
+
+                    <a href="nokti.html">
+                        Nokti & manikir
+                    </a>
+
+                    <a href="pedikir.html">
+                        Pedikir
+                    </a>
+
+                    <a href="obrve-trepavice.html">
+                        Obrve & trepavice
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="galerija.html" class="nav-link active">
+                Galerija
+            </a>
+
+            <a href="o-nama.html" class="nav-link">
+                O nama
+            </a>
+
+            <a href="cenovnik.html" class="nav-link">
+                Cenovnik
+            </a>
+
+            <a href="kontakt.html" class="nav-link">
+                Kontakt
+            </a>
+
+
+            <a href="kontakt.html" class="nav-cta">
+                Zakaži termin
+            </a>
+
+        </nav>
+
+
+        <button
+            class="search-toggle"
+            id="searchToggle"
+            aria-label="Pretraga"
+        >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Otvori meni"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <div class="search-box">
+
+        <div class="search-box-top">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Pretraži sajt..."
+                autocomplete="off"
+            >
+
+            <button class="search-close" id="searchClose" aria-label="Zatvori pretragu">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="search-results" id="searchResults"></div>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="page-hero gallery-page-hero">
+
+    <div class="page-hero-decoration page-hero-decoration-one"></div>
+
+    <div class="page-hero-decoration page-hero-decoration-two"></div>
+
+
+    <div class="container">
+
+        <div class="page-hero-content reveal">
+
+            <span class="section-kicker">
+                STIL • GALERIJA
+            </span>
+
+
+            <h1>
+                Mali detalji,
+                <em>veliki utisak.</em>
+            </h1>
+
+
+            <p>
+                Pogledaj delić STIL atmosfere,
+                naših radova i beauty trenutaka.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY INTRO
+========================================================= -->
+
+<section class="gallery-intro section">
+
+    <div class="container narrow-container">
+
+        <div class="section-heading centered reveal">
+
+            <span class="section-kicker">
+                DOBRODOŠLA U STIL
+            </span>
+
+
+            <h2>
+                Ovde se
+                <em>STIL vidi.</em>
+            </h2>
+
+
+            <div class="gold-divider"></div>
+
+
+            <p>
+                Fotografije salona, detalja, noktiju,
+                tretmana i svega što čini naš mali beauty
+                svet.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY FILTER
+========================================================= -->
+
+<section class="gallery-section section">
+
+    <div class="container">
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="gallery-filters reveal">
+
+            <button
+                class="gallery-filter active"
+                data-filter="all"
+                type="button"
+            >
+                Sve
+            </button>
+
+
+            <button
+                class="gallery-filter"
+                data-filter="salon"
+                type="button"
+            >
+                Salon
+            </button>
+
+
+            <button
+                class="gallery-filter"
+                data-filter="nails"
+                type="button"
+            >
+                Nokti
+            </button>
+
+
+            <button
+                class="gallery-filter"
+                data-filter="face"
+                type="button"
+            >
+                Nega lica
+            </button>
+
+
+            <button
+                class="gallery-filter"
+                data-filter="beauty"
+                type="button"
+            >
+                Beauty
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             GALLERY
+        ====================================================== -->
+
+        <div class="gallery-masonry">
+
+
+            <!-- IMAGE 1 -->
+
+            <article
+                class="gallery-photo gallery-photo-large gallery-item salon reveal"
+                data-category="salon"
+            >
+
+                <div class="gallery-photo-placeholder gallery-green">
+
+                    <span class="photo-category">
+                        SALON
+                    </span>
+
+                    <span class="photo-title">
+                        STIL
+                    </span>
+
+                    <span class="photo-small">
+                        naš mali kutak
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Salon
+                    </span>
+
+                    <strong>
+                        STIL
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 2 -->
+
+            <article
+                class="gallery-photo nails reveal"
+                data-category="nails"
+            >
+
+                <div class="gallery-photo-placeholder gallery-cream">
+
+                    <span class="photo-category">
+                        NAILS
+                    </span>
+
+                    <span class="photo-title">
+                        01
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Nokti
+                    </span>
+
+                    <strong>
+                        Detail
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 3 -->
+
+            <article
+                class="gallery-photo face reveal"
+                data-category="face"
+            >
+
+                <div class="gallery-photo-placeholder gallery-soft">
+
+                    <span class="photo-category">
+                        CARE
+                    </span>
+
+                    <span class="photo-title">
+                        02
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Nega lica
+                    </span>
+
+                    <strong>
+                        Care
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 4 -->
+
+            <article
+                class="gallery-photo gallery-photo-wide salon reveal"
+                data-category="salon"
+            >
+
+                <div class="gallery-photo-placeholder gallery-dark">
+
+                    <span class="photo-category">
+                        STIL BEAUTY
+                    </span>
+
+                    <span class="photo-title">
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Naš prostor
+                    </span>
+
+                    <strong>
+                        STIL
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 5 -->
+
+            <article
+                class="gallery-photo beauty reveal"
+                data-category="beauty"
+            >
+
+                <div class="gallery-photo-placeholder gallery-pink">
+
+                    <span class="photo-category">
+                        BEAUTY
+                    </span>
+
+                    <span class="photo-title">
+                        04
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Beauty
+                    </span>
+
+                    <strong>
+                        STIL
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 6 -->
+
+            <article
+                class="gallery-photo nails gallery-photo-tall reveal"
+                data-category="nails"
+            >
+
+                <div class="gallery-photo-placeholder gallery-gold">
+
+                    <span class="photo-category">
+                        NAILS
+                    </span>
+
+                    <span class="photo-title">
+                        05
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Nokti
+                    </span>
+
+                    <strong>
+                        STIL Nails
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 7 -->
+
+            <article
+                class="gallery-photo face reveal"
+                data-category="face"
+            >
+
+                <div class="gallery-photo-placeholder gallery-green-light">
+
+                    <span class="photo-category">
+                        FACE
+                    </span>
+
+                    <span class="photo-title">
+                        06
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Tretman
+                    </span>
+
+                    <strong>
+                        Care
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 8 -->
+
+            <article
+                class="gallery-photo gallery-photo-large beauty reveal"
+                data-category="beauty"
+            >
+
+                <div class="gallery-photo-placeholder gallery-neutral">
+
+                    <span class="photo-category">
+                        STIL
+                    </span>
+
+                    <span class="photo-title">
+                        BEAUTY
+                    </span>
+
+                    <span class="photo-small">
+                        detalji koji čine razliku
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Beauty
+                    </span>
+
+                    <strong>
+                        STIL
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 9 -->
+
+            <article
+                class="gallery-photo nails reveal"
+                data-category="nails"
+            >
+
+                <div class="gallery-photo-placeholder gallery-rose">
+
+                    <span class="photo-category">
+                        NAILS
+                    </span>
+
+                    <span class="photo-title">
+                        07
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Manikir
+                    </span>
+
+                    <strong>
+                        Detail
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- IMAGE 10 -->
+
+            <article
+                class="gallery-photo salon reveal"
+                data-category="salon"
+            >
+
+                <div class="gallery-photo-placeholder gallery-olive">
+
+                    <span class="photo-category">
+                        STIL
+                    </span>
+
+                    <span class="photo-title">
+                        08
+                    </span>
+
+                </div>
+
+
+                <div class="gallery-photo-overlay">
+
+                    <span>
+                        Salon
+                    </span>
+
+                    <strong>
+                        Atmosfera
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INSTAGRAM SECTION
+========================================================= -->
+
+<section class="instagram-section section">
+
+    <div class="container">
+
+        <div class="instagram-box reveal">
+
+            <div class="instagram-icon">
+                ◎
+            </div>
+
+
+            <span class="section-kicker">
+                PRATIMO SE
+            </span>
+
+
+            <h2>
+                Još STIL-a
+                na <em>Instagramu.</em>
+            </h2>
+
+
+            <p>
+                Pogledaj najnovije radove, termine i
+                svakodnevne trenutke iz salona.
+            </p>
+
+
+            <a
+                href="#"
+                class="btn btn-outline"
+                target="_blank"
+                rel="noopener"
+            >
+                Poseti Instagram
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section section">
+
+    <div class="container">
+
+        <div class="cta-box reveal">
+
+            <div class="cta-decoration">
+                ✦
+            </div>
+
+
+            <span class="section-kicker">
+                STIL BEAUTY
+            </span>
+
+
+            <h2>
+                Dopada ti se
+                <em>STIL?</em>
+            </h2>
+
+
+            <p>
+                Onda je možda vreme da rezervišeš
+                svoj termin.
+            </p>
+
+
+            <a href="kontakt.html" class="btn btn-primary">
+
+                Zakaži termin
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <span>
+                        STIL
+                    </span>
+
+                    <small>
+                        beauty & care
+                    </small>
+
+                </a>
+
+
+                <p>
+                    Nega i lepota,
+                    sa pažnjom za detalj.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Navigacija
+                </h4>
+
+                <a href="index.html">
+                    Početna
+                </a>
+
+                <a href="usluge.html">
+                    Usluge
+                </a>
+
+                <a href="galerija.html">
+                    Galerija
+                </a>
+
+                <a href="o-nama.html">
+                    O nama
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Usluge
+                </h4>
+
+                <a href="nega-lica.html">
+                    Nega lica
+                </a>
+
+                <a href="nokti.html">
+                    Nokti & manikir
+                </a>
+
+                <a href="pedikir.html">
+                    Pedikir
+                </a>
+
+                <a href="obrve-trepavice.html">
+                    Obrve & trepavice
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Kontakt
+                </h4>
+
+                <p>
+                    Adresa salona
+                </p>
+
+                <a href="tel:+381000000000">
+                    +381 00 000 0000
+                </a>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="kontakt.html">
+                    Zakaži termin
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 STIL Beauty Salon
+            </span>
+
+            <span>
+                Made with care.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js_main.js"></script>
+
+</body>
+</html>

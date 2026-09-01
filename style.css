@@ -1,0 +1,4975 @@
+/* =========================================================
+   STIL BEAUTY SALON
+   GLOBAL CSS
+========================================================= */
+
+
+/* =========================================================
+   01. VARIABLES
+========================================================= */
+
+:root {
+
+    --green-dark: #243b32;
+    --green: #3f5b4b;
+    --green-light: #718878;
+    --green-pale: #dce3da;
+
+    --cream: #f7f2e9;
+    --cream-dark: #ede5d7;
+    --ivory: #fbf9f4;
+
+    --gold: #b89a5b;
+    --gold-dark: #92763f;
+    --gold-light: #d7c28f;
+
+    --brown: #5a4b3f;
+    --text: #3d3934;
+    --text-light: #777169;
+
+    --white: #ffffff;
+    --black: #20201d;
+
+    --border: rgba(61, 57, 52, 0.12);
+    --border-gold: rgba(184, 154, 91, 0.35);
+
+    --shadow: 0 18px 50px rgba(36, 59, 50, 0.10);
+    --shadow-small: 0 8px 25px rgba(36, 59, 50, 0.08);
+
+    --radius: 4px;
+    --radius-large: 14px;
+
+    --container: 1180px;
+
+    --transition: 0.3s ease;
+
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    background: var(--ivory);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* =========================================================
+   03. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    color: var(--green-dark);
+    line-height: 1.05;
+}
+
+
+h1 em,
+h2 em,
+h3 em {
+    color: var(--gold-dark);
+    font-style: italic;
+}
+
+
+p {
+    color: var(--text-light);
+}
+
+
+strong {
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+
+.container {
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
+    margin: 0 auto;
+}
+
+
+.narrow-container {
+    max-width: 760px;
+}
+
+
+/* =========================================================
+   04. SECTION
+========================================================= */
+
+.section {
+    padding: 110px 0;
+}
+
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+
+.section-heading.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(42px, 5vw, 68px);
+    margin: 14px 0 20px;
+}
+
+
+.section-heading p {
+    max-width: 620px;
+}
+
+
+.section-heading.centered p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.section-kicker {
+    display: inline-block;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold-dark);
+}
+
+
+.gold-divider {
+    width: 55px;
+    height: 1px;
+    background: var(--gold);
+
+    margin: 28px auto;
+}
+
+
+/* =========================================================
+   05. HEADER
+========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+
+    background: rgba(251, 249, 244, 0.96);
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+
+.site-header.scrolled {
+    position: sticky;
+    top: 0;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+
+.header-inner {
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+.logo-main {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 0.8;
+
+    letter-spacing: 3px;
+
+    color: var(--green-dark);
+}
+
+
+.logo-sub {
+    margin-top: 8px;
+
+    font-family: "Nunito Sans", sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold-dark);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+
+.nav-link {
+    position: relative;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--text);
+
+    padding: 8px 0;
+
+    transition: color var(--transition);
+}
+
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: width var(--transition);
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--green-dark);
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.nav-dropdown {
+    position: relative;
+}
+
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.dropdown-arrow {
+    font-size: 14px;
+    transition: transform var(--transition);
+}
+
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 15px);
+    left: -20px;
+
+    min-width: 220px;
+
+    padding: 12px;
+
+    background: var(--ivory);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition);
+}
+
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 10px 12px;
+
+    font-size: 13px;
+
+    color: var(--text-light);
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+    background: var(--cream);
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   CTA NAV
+========================================================= */
+
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+
+    padding: 0 20px;
+
+    background: var(--green-dark);
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+
+.nav-cta:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.search-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        border-color var(--transition),
+        color var(--transition);
+}
+
+
+.search-toggle:hover {
+    border-color: var(--gold);
+
+    color: var(--gold-dark);
+}
+
+
+.search-toggle svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border: 1px solid var(--border);
+}
+
+
+.menu-toggle span {
+    width: 20px;
+    height: 1px;
+
+    background: var(--green-dark);
+
+    transition: var(--transition);
+}
+
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   06. BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    min-height: 52px;
+
+    padding: 0 28px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    border: 1px solid transparent;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border var(--transition),
+        transform var(--transition);
+}
+
+
+.btn span {
+    font-size: 17px;
+
+    transition: transform var(--transition);
+}
+
+
+.btn:hover span {
+    transform: translateX(4px);
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-primary {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+
+.btn-primary:hover {
+    background: var(--gold-dark);
+}
+
+
+.btn-outline {
+    border-color: var(--green-dark);
+    color: var(--green-dark);
+    background: transparent;
+}
+
+
+.btn-outline:hover {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+
+.btn-light {
+    border-color: var(--gold-light);
+    color: var(--white);
+    background: transparent;
+}
+
+
+.btn-light:hover {
+    background: var(--gold-light);
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   07. HERO
+========================================================= */
+
+.page-hero {
+    position: relative;
+
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--cream) 0%,
+            var(--ivory) 65%
+        );
+}
+
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 720px;
+
+    padding: 80px 0;
+}
+
+
+.page-hero h1 {
+    font-size: clamp(55px, 7vw, 92px);
+
+    margin: 18px 0 25px;
+}
+
+
+.page-hero p {
+    max-width: 580px;
+
+    font-size: 17px;
+}
+
+
+.page-hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border-gold);
+}
+
+
+.page-hero-decoration-one {
+    width: 430px;
+    height: 430px;
+
+    right: -130px;
+    top: -130px;
+}
+
+
+.page-hero-decoration-two {
+    width: 220px;
+    height: 220px;
+
+    right: 110px;
+    bottom: -130px;
+}
+
+
+/* =========================================================
+   08. HOME / HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 88px);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--cream);
+}
+
+
+.hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border-gold);
+}
+
+
+.hero-decoration-one {
+    width: 480px;
+    height: 480px;
+
+    right: -160px;
+    top: -160px;
+}
+
+
+.hero-decoration-two {
+    width: 260px;
+    height: 260px;
+
+    left: -110px;
+    bottom: -110px;
+}
+
+
+.hero-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+.hero-content {
+    max-width: 620px;
+}
+
+
+.hero h1 {
+    font-size: clamp(56px, 6.5vw, 92px);
+
+    margin: 20px 0 28px;
+}
+
+
+.hero p {
+    max-width: 520px;
+
+    font-size: 18px;
+
+    margin-bottom: 32px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+.hero-note {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 34px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: var(--text-soft);
+}
+
+
+.gold-line {
+    width: 40px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+.hero-visual {
+    position: relative;
+}
+
+
+.hero-image-frame {
+    position: relative;
+
+    min-height: 360px;
+    max-width: 340px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--green-dark);
+
+    border-radius: 46% 54% 52% 48% / 55% 45% 55% 45%;
+}
+
+
+.hero-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.placeholder-circle {
+    width: 130px;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+
+.placeholder-circle span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--white);
+}
+
+
+.placeholder-content {
+    display: flex;
+
+    gap: 6px;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.hero-gold-badge {
+    position: absolute;
+
+    left: -30px;
+    bottom: -30px;
+
+    width: 130px;
+    height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow: var(--shadow);
+}
+
+
+.badge-small {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--white);
+}
+
+
+.badge-main {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--white);
+}
+
+
+/* =========================================================
+   08B. WHY STIL (početna)
+========================================================= */
+
+.why-section {
+    background: var(--green);
+}
+
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.section-kicker.light {
+    color: var(--gold-light);
+}
+
+
+.why-content h2 {
+    margin: 16px 0 20px;
+
+    color: var(--white);
+}
+
+
+.why-content p {
+    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+.why-features {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+
+.feature-symbol {
+    flex-shrink: 0;
+
+    width: 40px;
+
+    font-size: 24px;
+
+    color: var(--gold-light);
+}
+
+
+.feature h3 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+
+    color: var(--white);
+}
+
+
+.feature p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   08C. ABOUT PREVIEW (početna)
+========================================================= */
+
+.about-preview {
+    background: var(--ivory);
+}
+
+
+.about-preview-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.about-visual {
+    position: relative;
+}
+
+
+.about-image-placeholder {
+    position: relative;
+
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--green);
+}
+
+
+.vertical-text {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.about-placeholder-logo {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 46px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, 0.92);
+}
+
+
+.about-gold-detail {
+    position: absolute;
+
+    right: -30px;
+    bottom: -30px;
+
+    width: 140px;
+    height: 140px;
+
+    z-index: -1;
+
+    border: 1px solid var(--border-gold);
+    border-radius: 50%;
+}
+
+
+.about-content p {
+    margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   08D. CONSULTATION BOX (stranice usluga)
+========================================================= */
+
+.consultation-section {
+    background: var(--green-pale);
+}
+
+
+.consultation-box {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 50px 60px;
+
+    background: var(--ivory);
+
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-large);
+}
+
+
+.consultation-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+
+    font-size: 26px;
+
+    color: var(--gold-light);
+
+    border-radius: 50%;
+
+    background: var(--green-dark);
+}
+
+
+.consultation-content h2 {
+    margin: 8px 0 10px;
+}
+
+
+.consultation-content p {
+    max-width: 420px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   08E. BENEFITS GRID (stranice usluga)
+========================================================= */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+
+.benefit-card {
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.benefit-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    color: var(--gold-dark);
+}
+
+
+.benefit-icon {
+    display: block;
+
+    margin-bottom: 16px;
+
+    font-size: 30px;
+
+    color: var(--green-dark);
+}
+
+
+.benefit-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 19px;
+}
+
+
+.benefit-card p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   08F. NAIL ART DECORATION (nokti.html hero)
+========================================================= */
+
+.nail-art-decoration {
+    position: absolute;
+    z-index: 1;
+
+    inset: 0;
+}
+
+
+.nail-shape {
+    position: absolute;
+
+    width: 40px;
+    height: 56px;
+
+    border-radius: 50% 50% 45% 45%;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.nail-one {
+    top: 18%;
+    left: 20%;
+
+    transform: rotate(-12deg);
+}
+
+
+.nail-two {
+    top: 55%;
+    right: 22%;
+
+    transform: rotate(10deg);
+}
+
+
+.nail-three {
+    bottom: 14%;
+    left: 38%;
+
+    transform: rotate(-4deg);
+}
+
+
+/* =========================================================
+   08G. NAILS STYLE SECTION (nokti.html)
+========================================================= */
+
+.nails-style-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+.nails-style-visual {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.style-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 28px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+
+.style-card:hover {
+    transform: translateX(8px);
+
+    border-color: var(--border-gold);
+}
+
+
+.style-card span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    color: var(--gold-dark);
+}
+
+
+.style-card strong {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--green-dark);
+}
+
+
+.style-card-one {
+    margin-left: 0;
+}
+
+
+.style-card-two {
+    margin-left: 30px;
+}
+
+
+.style-card-three {
+    margin-left: 60px;
+
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+}
+
+
+.style-card-three span,
+.style-card-three strong {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   08H. RITUAL SECTION (pedikir.html)
+========================================================= */
+
+.pedicure-ritual-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.ritual-visual {
+    display: flex;
+    justify-content: center;
+}
+
+
+.ritual-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 340px;
+
+    aspect-ratio: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    background: var(--green-dark);
+
+    border-radius: 50%;
+}
+
+
+.ritual-script {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+
+    font-size: 30px;
+
+    color: var(--gold-light);
+}
+
+
+.ritual-logo {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.ritual-content p {
+    margin-bottom: 14px;
+}
+
+
+.pedicure-decoration {
+    position: absolute;
+    z-index: 2;
+
+    top: 30px;
+    right: 30px;
+}
+
+
+.pedicure-decoration span {
+    display: inline-block;
+
+    padding: 6px 16px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: var(--white);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   09. SERVICE DETAIL HERO
+========================================================= */
+
+.service-detail-hero {
+    padding: 100px 0;
+
+    background: var(--cream);
+}
+
+
+.service-detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(350px, 0.8fr);
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+.service-detail-content h1 {
+    font-size: clamp(55px, 6vw, 86px);
+
+    margin: 18px 0 25px;
+}
+
+
+.service-detail-content p {
+    max-width: 520px;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+.service-detail-visual {
+    position: relative;
+}
+
+
+.detail-image-placeholder {
+    min-height: 540px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--green);
+}
+
+
+.detail-image-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    border-radius: 50%;
+}
+
+
+.detail-script {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 100px;
+    font-style: italic;
+
+    color: var(--cream);
+}
+
+
+.detail-brand {
+    position: absolute;
+
+    bottom: 25px;
+    left: 30px;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: var(--gold-light);
+}
+
+
+.detail-gold-circle {
+    position: absolute;
+
+    right: -28px;
+    bottom: -28px;
+
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--gold);
+
+    color: var(--white);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   EYES DECORATION
+========================================================= */
+
+.eyes-placeholder {
+    background:
+        linear-gradient(
+            145deg,
+            #334c40,
+            #263b32
+        );
+}
+
+
+.eye-decoration {
+    position: relative;
+
+    width: 230px;
+    height: 150px;
+}
+
+
+.brow-line {
+    position: absolute;
+
+    width: 170px;
+    height: 45px;
+
+    left: 30px;
+    top: 25px;
+
+    border-top: 6px solid var(--gold-light);
+
+    border-radius: 50%;
+
+    transform: rotate(-4deg);
+}
+
+
+.lash-line {
+    position: absolute;
+
+    width: 120px;
+    height: 55px;
+
+    left: 55px;
+    top: 75px;
+
+    border-bottom: 2px solid var(--cream);
+
+    border-radius: 50%;
+}
+
+
+.lash-one {
+    transform: rotate(5deg);
+}
+
+
+.lash-two {
+    transform:
+        rotate(5deg)
+        translateY(-5px);
+}
+
+
+.lash-three {
+    transform:
+        rotate(5deg)
+        translateY(-10px);
+}
+
+
+/* =========================================================
+   10. TREATMENT LIST
+========================================================= */
+
+.treatments-list {
+    border-top: 1px solid var(--border);
+}
+
+
+.treatment-card {
+    display: grid;
+
+    grid-template-columns:
+        70px
+        1fr
+        220px
+        45px;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background var(--transition),
+        padding var(--transition);
+}
+
+
+.treatment-card:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background: var(--cream);
+}
+
+
+.treatment-index {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    color: var(--gold-dark);
+}
+
+
+.treatment-main h3 {
+    font-size: 29px;
+
+    margin-bottom: 5px;
+}
+
+
+.treatment-main p {
+    font-size: 13px;
+}
+
+
+.treatment-meta {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    text-align: right;
+}
+
+
+.treatment-meta span {
+    font-size: 11px;
+
+    color: var(--text-light);
+}
+
+
+.treatment-meta strong {
+    font-size: 12px;
+}
+
+
+.treatment-arrow {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    color: var(--green-dark);
+
+    transition: var(--transition);
+}
+
+
+.treatment-card:hover .treatment-arrow {
+    background: var(--green-dark);
+    color: white;
+
+    border-color: var(--green-dark);
+}
+
+
+/* =========================================================
+   10B. SERVICE CARDS (grid kartica usluga — početna + usluge)
+========================================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+.service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    padding: 42px 32px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+
+    border-color: var(--border-gold);
+
+    background: var(--ivory);
+}
+
+
+.service-card.service-card-accent {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+}
+
+
+.service-card.service-card-accent:hover {
+    background: var(--green-dark);
+    transform: translateY(-6px);
+}
+
+
+.service-card.service-card-accent .service-number,
+.service-card.service-card-accent h3,
+.service-card.service-card-accent p {
+    color: var(--white);
+}
+
+
+.service-card.service-card-accent .service-icon,
+.service-card.service-card-accent .service-link {
+    color: var(--gold-light);
+}
+
+
+.service-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    color: var(--gold-dark);
+}
+
+
+.service-icon {
+    font-size: 30px;
+
+    color: var(--green-dark);
+}
+
+
+.service-card h3 {
+    font-size: 26px;
+
+    margin-top: 2px;
+}
+
+
+.service-card p {
+    font-size: 13px;
+
+    flex-grow: 1;
+}
+
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    color: var(--green-dark);
+}
+
+
+.service-link span {
+    transition: transform var(--transition);
+}
+
+
+.service-card:hover .service-link span {
+    transform: translateX(4px);
+}
+
+
+.center-button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: var(--green-dark);
+
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 3px;
+
+    transition: color var(--transition);
+}
+
+
+.text-link:hover {
+    color: var(--gold-dark);
+}
+
+
+.text-link span {
+    transition: transform var(--transition);
+}
+
+
+.text-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   10C. SERVICES NOTE (Zašto STIL — na usluge.html)
+========================================================= */
+
+.services-note {
+    background: var(--green-pale);
+}
+
+
+.services-note-inner {
+    display: grid;
+
+    grid-template-columns: 1fr 240px;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.services-note-text h2 {
+    margin: 14px 0 20px;
+}
+
+
+.services-note-text p {
+    margin-bottom: 14px;
+}
+
+
+.services-note-decoration {
+    display: flex;
+    justify-content: center;
+}
+
+
+.gold-circle {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-gold);
+    border-radius: 50%;
+
+    background: var(--ivory);
+}
+
+
+.gold-circle span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   11. RESULT SECTION
+========================================================= */
+
+.result-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 80px 1fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.result-card {
+    position: relative;
+}
+
+
+.result-placeholder {
+    min-height: 430px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 25px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.result-before {
+    background:
+        linear-gradient(
+            145deg,
+            #d9cfc0,
+            #b8a897
+        );
+}
+
+
+.result-after {
+    background:
+        linear-gradient(
+            145deg,
+            #607565,
+            #30483b
+        );
+}
+
+
+.result-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+
+.result-placeholder span {
+    position: relative;
+    z-index: 2;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: white;
+}
+
+
+.result-label {
+    padding-top: 13px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.result-arrow {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   12. TIPS
+========================================================= */
+
+.tips-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.tip-card {
+    position: relative;
+
+    padding: 40px 35px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+}
+
+
+.tip-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    color: var(--gold);
+
+    display: block;
+
+    margin-bottom: 25px;
+}
+
+
+.tip-card h3 {
+    font-size: 29px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   13. GALLERY
+========================================================= */
+
+.gallery-section {
+    background: var(--ivory);
+}
+
+
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 50px;
+}
+
+
+.gallery-filter {
+    padding: 10px 18px;
+
+    border: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+
+.gallery-filter:hover,
+.gallery-filter.active {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+
+    color: white;
+}
+
+
+/* =========================================================
+   MASONRY
+========================================================= */
+
+.gallery-masonry {
+    columns: 3 300px;
+
+    column-gap: 18px;
+}
+
+
+.gallery-photo {
+    position: relative;
+
+    break-inside: avoid;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+
+.gallery-photo-placeholder {
+    min-height: 350px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: transform 0.6s ease;
+}
+
+
+.gallery-photo-large .gallery-photo-placeholder {
+    min-height: 500px;
+}
+
+
+.gallery-photo-wide .gallery-photo-placeholder {
+    min-height: 300px;
+}
+
+
+.gallery-photo-tall .gallery-photo-placeholder {
+    min-height: 570px;
+}
+
+
+.gallery-photo:hover .gallery-photo-placeholder {
+    transform: scale(1.04);
+}
+
+
+.gallery-green {
+    background: #536b5a;
+}
+
+
+.gallery-cream {
+    background: #ddd2c0;
+}
+
+
+.gallery-soft {
+    background: #c9b8a9;
+}
+
+
+.gallery-dark {
+    background: #293b32;
+}
+
+
+.gallery-pink {
+    background: #c9a9a4;
+}
+
+
+.gallery-gold {
+    background: #a98c58;
+}
+
+
+.gallery-green-light {
+    background: #8c9d88;
+}
+
+
+.gallery-neutral {
+    background: #bcb4a7;
+}
+
+
+.gallery-rose {
+    background: #ad8982;
+}
+
+
+.gallery-olive {
+    background: #66745e;
+}
+
+
+.photo-category {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.75);
+}
+
+
+.photo-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 70px;
+
+    color: white;
+}
+
+
+.photo-small {
+    font-size: 11px;
+
+    color: rgba(255,255,255,0.7);
+}
+
+
+.gallery-photo-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.6)
+        );
+
+    transform: translateY(100%);
+
+    transition: transform var(--transition);
+}
+
+
+.gallery-photo:hover .gallery-photo-overlay {
+    transform: translateY(0);
+}
+
+
+.gallery-photo-overlay span {
+    font-size: 10px;
+
+    color: rgba(255,255,255,0.7);
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.gallery-photo-overlay strong {
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+}
+
+
+.gallery-photo.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   14. INSTAGRAM
+========================================================= */
+
+.instagram-section {
+    background: var(--cream);
+}
+
+
+.instagram-box {
+    max-width: 760px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 80px 30px;
+
+    border: 1px solid var(--border-gold);
+
+    position: relative;
+}
+
+
+.instagram-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    color: var(--gold-dark);
+
+    font-size: 25px;
+}
+
+
+.instagram-box h2 {
+    font-size: 55px;
+
+    margin: 15px 0;
+}
+
+
+.instagram-box p {
+    max-width: 500px;
+
+    margin: 0 auto 28px;
+}
+
+
+/* =========================================================
+   15. ABOUT
+========================================================= */
+
+.about-story-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.about-story-visual {
+    position: relative;
+}
+
+
+.about-image-placeholder {
+    min-height: 590px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #526a58,
+            #293e33
+        );
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.about-image-placeholder::before {
+    content: "";
+
+    width: 320px;
+    height: 320px;
+
+    position: absolute;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+}
+
+
+.about-image-script {
+    position: relative;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 105px;
+
+    color: var(--cream);
+
+    font-style: italic;
+}
+
+
+.about-image-caption {
+    position: relative;
+
+    color: var(--gold-light);
+
+    letter-spacing: 5px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+}
+
+
+.about-stamp {
+    position: absolute;
+
+    right: -35px;
+    bottom: -35px;
+
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: white;
+
+    transform: rotate(-12deg);
+}
+
+
+.about-stamp span {
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+
+.about-stamp strong {
+    font-family: "Cormorant Garamond", serif;
+
+    color: white;
+
+    font-size: 28px;
+}
+
+
+.about-story-content h2 {
+    font-size: clamp(45px, 5vw, 68px);
+
+    margin: 15px 0 25px;
+}
+
+
+.about-story-content .gold-divider {
+    margin-left: 0;
+}
+
+
+.about-story-content p {
+    margin-bottom: 18px;
+}
+
+
+.large-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   16. GREEN SALON
+========================================================= */
+
+.green-salon-section {
+    background: var(--green-dark);
+}
+
+
+.green-salon-card {
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    min-height: 580px;
+}
+
+
+.green-salon-content {
+    padding: 75px;
+
+    background: #30483b;
+}
+
+
+.green-salon-content h2 {
+    color: var(--cream);
+
+    font-size: clamp(45px, 5vw, 68px);
+
+    margin: 17px 0 25px;
+}
+
+
+.green-salon-content h2 em {
+    color: var(--gold-light);
+}
+
+
+.green-salon-content p {
+    color: rgba(255,255,255,0.72);
+
+    margin-bottom: 16px;
+}
+
+
+.green-salon-signature {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.green-salon-signature span {
+    color: var(--gold-light);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.green-salon-signature strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+
+    color: var(--cream);
+}
+
+
+.green-salon-visual {
+    min-height: 500px;
+
+    background: #667a68;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.green-building-placeholder {
+    position: relative;
+
+    width: 80%;
+    height: 70%;
+
+    background: #536b58;
+
+    border: 8px solid #465c4b;
+
+    box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+}
+
+
+.building-window {
+    position: absolute;
+
+    width: 24%;
+    height: 28%;
+
+    top: 20%;
+
+    background: rgba(240,233,210,0.8);
+
+    border: 7px solid #3e5144;
+}
+
+
+.window-one {
+    left: 12%;
+}
+
+
+.window-two {
+    right: 12%;
+}
+
+
+.building-door {
+    position: absolute;
+
+    width: 24%;
+    height: 43%;
+
+    left: 38%;
+    bottom: 0;
+
+    background: #304238;
+
+    border: 6px solid #3d5042;
+}
+
+
+.building-sign {
+    position: absolute;
+
+    left: 50%;
+    top: 7%;
+
+    transform: translateX(-50%);
+
+    padding: 6px 16px;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   17. VALUES
+========================================================= */
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.value-card {
+    position: relative;
+
+    padding: 45px 30px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+}
+
+
+.value-number {
+    position: absolute;
+
+    right: 20px;
+    top: 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: var(--gold);
+}
+
+
+.value-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    color: var(--gold-dark);
+}
+
+
+.value-card h3 {
+    font-size: 31px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   18. ABOUT QUOTE
+========================================================= */
+
+.about-quote-section {
+    background: var(--cream);
+}
+
+
+.about-quote {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+
+.quote-mark {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 100px;
+
+    line-height: 0.5;
+
+    color: var(--gold);
+}
+
+
+.about-quote blockquote {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    color: var(--green-dark);
+}
+
+
+.about-quote blockquote em {
+    color: var(--gold-dark);
+}
+
+
+.quote-line {
+    width: 50px;
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 35px auto 20px;
+}
+
+
+.quote-signature {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   18B. QUOTE (početna)
+========================================================= */
+
+.quote-section {
+    background: var(--green-pale);
+}
+
+
+.quote-box {
+    max-width: 700px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.quote-box blockquote {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.3;
+
+    color: var(--green-dark);
+}
+
+
+.quote-brand {
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   19. ABOUT SERVICES
+========================================================= */
+
+.about-services-list {
+    border-top: 1px solid var(--border);
+}
+
+
+.about-service-item {
+    display: grid;
+
+    grid-template-columns: 80px 1fr 40px;
+
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding var(--transition),
+        background var(--transition);
+}
+
+
+.about-service-item:hover {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    background: var(--cream);
+}
+
+
+.about-service-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: var(--gold);
+}
+
+
+.about-service-name {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+    color: var(--green-dark);
+}
+
+
+.about-service-arrow {
+    font-size: 20px;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   20. PRICING
+========================================================= */
+
+.pricing-intro {
+    padding-bottom: 50px;
+}
+
+
+.pricing-tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 70px;
+}
+
+
+.pricing-tab {
+    padding: 13px 22px;
+
+    border: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+
+.pricing-tab:hover,
+.pricing-tab.active {
+    background: var(--green-dark);
+
+    border-color: var(--green-dark);
+
+    color: white;
+}
+
+
+.price-category {
+    display: none;
+}
+
+
+.price-category.active {
+    display: block;
+}
+
+
+.price-category-header {
+    max-width: 700px;
+
+    margin-bottom: 35px;
+}
+
+
+.price-category-header h2 {
+    font-size: 58px;
+
+    margin-top: 12px;
+}
+
+
+.price-list {
+    border-top: 1px solid var(--border);
+}
+
+
+.price-item {
+    display: grid;
+
+    grid-template-columns:
+        70px
+        1fr
+        160px;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.price-item-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: var(--gold);
+}
+
+
+.price-item-info h3 {
+    font-size: 28px;
+
+    margin-bottom: 3px;
+}
+
+
+.price-item-info p {
+    font-size: 13px;
+}
+
+
+.price-value {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+
+.price-value strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+}
+
+
+.price-value span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   PRICING NOTE
+========================================================= */
+
+.pricing-note {
+    padding-top: 0;
+}
+
+
+.pricing-note-box {
+    display: flex;
+
+    gap: 25px;
+
+    align-items: flex-start;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 28px;
+
+    background: var(--cream);
+
+    border-left: 3px solid var(--gold);
+}
+
+
+.pricing-note-icon {
+    font-size: 22px;
+
+    color: var(--gold);
+}
+
+
+.pricing-note-box h3 {
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.pricing-note-box p {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   21. CONTACT
+========================================================= */
+
+.contact-main {
+    background: var(--ivory);
+}
+
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.2fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+.contact-info h2 {
+    font-size: clamp(48px, 5vw, 70px);
+
+    margin: 15px 0 20px;
+}
+
+
+.contact-intro {
+    max-width: 450px;
+
+    font-size: 17px;
+
+    margin-bottom: 45px;
+}
+
+
+.contact-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.contact-detail {
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+}
+
+
+.contact-detail-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-gold);
+
+    border-radius: 50%;
+
+    color: var(--gold-dark);
+}
+
+
+.contact-detail span {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--gold-dark);
+
+    margin-bottom: 2px;
+}
+
+
+.contact-detail strong,
+.contact-detail a {
+    display: block;
+
+    color: var(--green-dark);
+
+    font-weight: 700;
+}
+
+
+.contact-detail p {
+    font-size: 13px;
+}
+
+
+.contact-social-note {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.contact-social-note span {
+    color: var(--gold);
+
+    font-size: 20px;
+}
+
+
+.contact-social-note p {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form-wrapper {
+    padding: 55px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+}
+
+
+.contact-form-header {
+    margin-bottom: 35px;
+}
+
+
+.contact-form-header h2 {
+    font-size: 52px;
+
+    margin: 10px 0;
+}
+
+
+.contact-form-header p {
+    font-size: 13px;
+}
+
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--green-dark);
+}
+
+
+.form-group label span {
+    font-size: 9px;
+
+    color: var(--text-light);
+
+    font-weight: 400;
+
+    text-transform: lowercase;
+
+    letter-spacing: 0;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid rgba(61,57,52,0.18);
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    padding: 13px 15px;
+
+    outline: none;
+
+    border-radius: 0;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184,154,91,0.10);
+}
+
+
+.form-checkbox {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+
+.form-checkbox input {
+    margin-top: 5px;
+
+    accent-color: var(--green-dark);
+}
+
+
+.form-checkbox label {
+    font-size: 11px;
+
+    color: var(--text-light);
+}
+
+
+.form-submit {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+.form-message {
+    min-height: 20px;
+
+    font-size: 12px;
+
+    text-align: center;
+
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   22. LOCATION
+========================================================= */
+
+.location-section {
+    background: var(--cream);
+}
+
+
+.location-card {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    min-height: 420px;
+
+    background: var(--green-dark);
+}
+
+
+.location-content {
+    padding: 60px;
+}
+
+
+.location-content h2 {
+    color: var(--cream);
+
+    font-size: 55px;
+
+    margin: 15px 0;
+}
+
+
+.location-content h2 em {
+    color: var(--gold-light);
+}
+
+
+.location-content p {
+    color: rgba(255,255,255,0.7);
+
+    margin-bottom: 30px;
+}
+
+
+.location-content .btn-outline {
+    color: var(--cream);
+
+    border-color: var(--gold-light);
+}
+
+
+.location-content .btn-outline:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+
+.map-placeholder {
+    position: relative;
+
+    min-height: 420px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9d2c5,
+            #bdb4a5
+        );
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.map-placeholder::before,
+.map-placeholder::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+    height: 1px;
+
+    background: rgba(255,255,255,0.55);
+
+    transform: rotate(-22deg);
+}
+
+
+.map-placeholder::after {
+    transform: rotate(35deg);
+}
+
+
+.map-pin {
+    position: relative;
+    z-index: 3;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green-dark);
+
+    color: var(--gold-light);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+
+.map-label {
+    position: absolute;
+
+    left: 50%;
+    top: calc(50% + 45px);
+
+    transform: translateX(-50%);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    color: var(--green-dark);
+}
+
+
+.map-address {
+    position: absolute;
+
+    left: 50%;
+    top: calc(50% + 80px);
+
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   23. FAQ
+========================================================= */
+
+.faq-list {
+    max-width: 850px;
+
+    margin: auto;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+
+.faq-question {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    text-align: left;
+
+    color: var(--green-dark);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+}
+
+
+.faq-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-gold);
+
+    border-radius: 50%;
+
+    color: var(--gold-dark);
+
+    font-family: "Nunito Sans", sans-serif;
+
+    font-size: 16px;
+
+    transition: transform var(--transition);
+}
+
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+
+.faq-answer {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.35s ease;
+}
+
+
+.faq-answer p {
+    overflow: hidden;
+
+    font-size: 14px;
+
+    padding-right: 60px;
+}
+
+
+.faq-item.open .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+
+.faq-item.open .faq-answer p {
+    padding-bottom: 25px;
+}
+
+
+/* =========================================================
+   24. CTA
+========================================================= */
+
+.cta-section {
+    background: var(--ivory);
+}
+
+
+.cta-box {
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding: 100px 30px;
+
+    background: var(--green-dark);
+}
+
+
+.cta-box::before,
+.cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(215,194,143,0.2);
+
+    border-radius: 50%;
+}
+
+
+.cta-box::before {
+    width: 500px;
+    height: 500px;
+
+    left: -220px;
+    top: -220px;
+}
+
+
+.cta-box::after {
+    width: 400px;
+    height: 400px;
+
+    right: -170px;
+    bottom: -180px;
+}
+
+
+.cta-box > *:not(.cta-decoration) {
+    position: relative;
+    z-index: 2;
+}
+
+
+.cta-box .section-kicker {
+    color: var(--gold-light);
+}
+
+
+.cta-box h2 {
+    color: var(--cream);
+
+    font-size: clamp(48px, 6vw, 75px);
+
+    margin: 15px 0;
+}
+
+
+.cta-box h2 em {
+    color: var(--gold-light);
+}
+
+
+.cta-box p {
+    max-width: 500px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255,255,255,0.72);
+}
+
+
+.cta-box .btn-primary {
+    background: var(--gold);
+
+    color: var(--white);
+}
+
+
+.cta-box .btn-primary:hover {
+    background: var(--gold-dark);
+}
+
+
+.cta-decoration {
+    position: absolute;
+
+    z-index: 1;
+
+    right: 12%;
+    top: 18%;
+
+    font-size: 100px;
+
+    color: rgba(215,194,143,0.08);
+}
+
+
+/* =========================================================
+   25. FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--green-dark);
+
+    color: rgba(255,255,255,0.7);
+
+    padding: 70px 0 25px;
+}
+
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    padding-bottom: 55px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.1);
+}
+
+
+.footer-logo {
+    display: inline-flex;
+
+    flex-direction: column;
+}
+
+
+.footer-logo span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: var(--cream);
+}
+
+
+.footer-logo small {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold-light);
+
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+.footer-brand p {
+    max-width: 250px;
+
+    margin-top: 20px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 13px;
+}
+
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.footer-column h4 {
+    color: var(--gold-light);
+
+    font-family: "Nunito Sans", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-column a,
+.footer-column p {
+    color: rgba(255,255,255,0.58);
+
+    font-size: 12px;
+
+    transition: color var(--transition);
+}
+
+
+.footer-column a:hover {
+    color: var(--cream);
+}
+
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+
+    font-size: 10px;
+
+    color: rgba(255,255,255,0.35);
+}
+
+
+/* =========================================================
+   26. SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   27. SERVICE PAGE BACKGROUNDS
+========================================================= */
+
+.service-intro {
+    background: var(--ivory);
+}
+
+
+.brows-result-section {
+    background: var(--cream);
+}
+
+
+.tips-section {
+    background: var(--ivory);
+}
+
+
+/* =========================================================
+   28. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 18px;
+    }
+
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+
+    .nav-cta {
+        padding: 0 14px;
+    }
+
+
+    .service-detail-grid {
+        gap: 50px;
+    }
+
+
+    .hero-grid {
+        gap: 40px;
+    }
+
+
+    .why-grid {
+        gap: 45px;
+    }
+
+
+    .about-preview-grid {
+        gap: 45px;
+    }
+
+
+    .contact-grid {
+        gap: 50px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .values-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   29. RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: min(
+            calc(100% - 32px),
+            var(--container)
+        );
+    }
+
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* HEADER */
+
+    .header-inner {
+        min-height: 74px;
+    }
+
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    .main-nav {
+        position: fixed;
+
+        inset: 74px 0 0;
+
+        z-index: 999;
+
+        background: var(--ivory);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 25px;
+
+        overflow-y: auto;
+
+        transform: translateX(100%);
+
+        transition: transform 0.35s ease;
+    }
+
+
+    .main-nav.open {
+        transform: translateX(0);
+    }
+
+
+    .nav-link {
+        display: block;
+
+        padding: 15px 0;
+
+        border-bottom: 1px solid var(--border);
+
+        font-size: 14px;
+    }
+
+
+    .nav-link::after {
+        display: none;
+    }
+
+
+    .nav-dropdown {
+        width: 100%;
+    }
+
+
+    .dropdown-trigger {
+        justify-content: space-between;
+    }
+
+
+    .dropdown-menu {
+        position: static;
+
+        min-width: 0;
+
+        padding: 0 0 5px;
+
+        border: none;
+
+        box-shadow: none;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        background: transparent;
+    }
+
+
+    .dropdown-menu a {
+        padding: 10px 15px;
+
+        border-bottom: 1px solid var(--border);
+
+        font-size: 13px;
+    }
+
+
+    .nav-cta {
+        margin-top: 25px;
+
+        min-height: 50px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 80px 0 0;
+
+        display: block;
+    }
+
+
+    .hero-content {
+        padding-bottom: 60px;
+    }
+
+
+    .hero-visual {
+        position: relative;
+
+        width: 100%;
+
+        height: 400px;
+    }
+
+
+    .hero-visual::before {
+        inset: 10% 8%;
+    }
+
+
+    .hero-visual::after {
+        font-size: 65px;
+    }
+
+
+    .page-hero {
+        min-height: 390px;
+    }
+
+
+    .page-hero-content {
+        padding: 60px 0;
+    }
+
+
+    /* SERVICE */
+
+    .service-detail-hero {
+        padding: 70px 0;
+    }
+
+
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        text-align: center;
+    }
+
+
+    .hero-content {
+        max-width: 100%;
+
+        margin: 0 auto;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .hero-note {
+        justify-content: center;
+    }
+
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .about-preview-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .consultation-box {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 40px 30px;
+
+        text-align: center;
+    }
+
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .nails-style-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .pedicure-ritual-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+
+    .style-card-one,
+    .style-card-two,
+    .style-card-three {
+        margin-left: 0;
+    }
+
+
+    .detail-image-placeholder {
+        min-height: 400px;
+    }
+
+
+    .treatment-card {
+        grid-template-columns:
+            45px
+            1fr
+            40px;
+
+        gap: 15px;
+    }
+
+
+    .treatment-meta {
+        display: none;
+    }
+
+
+    .treatment-main h3 {
+        font-size: 25px;
+    }
+
+
+    /* RESULT */
+
+    .result-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 450px;
+    }
+
+
+    .result-arrow {
+        margin: auto;
+
+        transform: rotate(90deg);
+    }
+
+
+    /* TIPS */
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SERVICES */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .services-note-inner {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+
+    /* ABOUT */
+
+    .about-story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .about-image-placeholder {
+        min-height: 450px;
+    }
+
+
+    .about-stamp {
+        right: 10px;
+        bottom: -25px;
+    }
+
+
+    .green-salon-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .green-salon-content {
+        padding: 50px 30px;
+    }
+
+
+    .green-salon-visual {
+        min-height: 400px;
+    }
+
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-service-item {
+        grid-template-columns: 50px 1fr 30px;
+    }
+
+
+    .about-service-name {
+        font-size: 27px;
+    }
+
+
+    /* PRICING */
+
+    .pricing-tabs {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 5px;
+    }
+
+
+    .pricing-tab {
+        flex-shrink: 0;
+    }
+
+
+    .price-item {
+        grid-template-columns:
+            45px
+            1fr
+            90px;
+
+        gap: 12px;
+    }
+
+
+    .price-item-info h3 {
+        font-size: 23px;
+    }
+
+
+    .price-value strong {
+        font-size: 21px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .contact-form-wrapper {
+        padding: 35px 25px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .location-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .location-content {
+        padding: 45px 30px;
+    }
+
+
+    .map-placeholder {
+        min-height: 350px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px 25px;
+    }
+
+}
+
+
+/* =========================================================
+   30. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+
+    .section {
+        padding: 60px 0;
+    }
+
+
+    .logo-main {
+        font-size: 31px;
+    }
+
+
+    .logo-sub {
+        font-size: 7px;
+    }
+
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+
+    .page-hero h1 {
+        font-size: 54px;
+    }
+
+
+    .hero p,
+    .service-detail-content p {
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .detail-image-placeholder {
+        min-height: 340px;
+    }
+
+
+    .detail-script {
+        font-size: 75px;
+    }
+
+
+    .treatment-card {
+        grid-template-columns:
+            35px
+            1fr
+            35px;
+    }
+
+
+    .treatment-index {
+        font-size: 18px;
+    }
+
+
+    .treatment-main h3 {
+        font-size: 22px;
+    }
+
+
+    .gallery-masonry {
+        columns: 1;
+    }
+
+
+    .gallery-photo-large .gallery-photo-placeholder,
+    .gallery-photo-tall .gallery-photo-placeholder,
+    .gallery-photo .gallery-photo-placeholder {
+        min-height: 380px;
+    }
+
+
+    .instagram-box {
+        padding: 60px 20px;
+    }
+
+
+    .instagram-box h2 {
+        font-size: 43px;
+    }
+
+
+    .about-image-placeholder {
+        min-height: 380px;
+    }
+
+
+    .about-image-script {
+        font-size: 75px;
+    }
+
+
+    .about-story-content h2 {
+        font-size: 47px;
+    }
+
+
+    .green-salon-content h2 {
+        font-size: 47px;
+    }
+
+
+    .price-category-header h2 {
+        font-size: 45px;
+    }
+
+
+    .price-item {
+        grid-template-columns:
+            30px
+            1fr
+            75px;
+    }
+
+
+    .price-item-info h3 {
+        font-size: 20px;
+    }
+
+
+    .price-item-info p {
+        font-size: 11px;
+    }
+
+
+    .price-value strong {
+        font-size: 18px;
+    }
+
+
+    .price-value span {
+        font-size: 8px;
+    }
+
+
+    .contact-form-header h2 {
+        font-size: 43px;
+    }
+
+
+    .location-content h2 {
+        font-size: 45px;
+    }
+
+
+    .faq-question {
+        font-size: 21px;
+    }
+
+
+    .faq-answer p {
+        padding-right: 0;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .cta-box {
+        padding: 70px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   31. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--gold);
+
+    outline-offset: 4px;
+}
+
+
+::selection {
+    background: var(--gold);
+
+    color: white;
+}
+
+
+/* =========================================================
+   31B. SEARCH OVERLAY
+========================================================= */
+
+.search-overlay {
+    position: fixed;
+    z-index: 200;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 120px 20px 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: rgba(36, 59, 50, 0.55);
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+}
+
+
+.search-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.search-box {
+    width: 100%;
+    max-width: 560px;
+
+    background: var(--ivory);
+
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transform: translateY(-16px);
+
+    transition: transform var(--transition);
+}
+
+
+.search-overlay.open .search-box {
+    transform: translateY(0);
+}
+
+
+.search-box-top {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.search-box input {
+    flex: 1;
+
+    padding: 22px 24px;
+
+    border: none;
+    background: transparent;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+
+    color: var(--text);
+}
+
+
+.search-box input:focus {
+    outline: none;
+}
+
+
+.search-box input::placeholder {
+    color: var(--text-light);
+}
+
+
+.search-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    margin-right: 12px;
+
+    flex-shrink: 0;
+
+    border: none;
+    background: transparent;
+
+    font-size: 16px;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    transition: color var(--transition);
+}
+
+
+.search-close:hover {
+    color: var(--gold-dark);
+}
+
+
+.search-results {
+    max-height: 360px;
+
+    overflow-y: auto;
+}
+
+
+.search-results.has-results {
+    padding: 10px;
+}
+
+
+.search-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    transition: background var(--transition);
+}
+
+
+.search-result:hover {
+    background: var(--cream);
+}
+
+
+.search-result-title {
+    font-size: 14px;
+    font-weight: 700;
+
+    color: var(--green-dark);
+}
+
+
+.search-result-arrow {
+    font-size: 13px;
+
+    color: var(--gold-dark);
+
+    opacity: 0;
+
+    transform: translateX(-4px);
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+
+.search-result:hover .search-result-arrow {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+.search-empty {
+    padding: 24px 16px;
+
+    font-size: 13px;
+
+    color: var(--text-light);
+
+    text-align: center;
+}
+
+
+body.search-open {
+    overflow: hidden;
+}
+
+
+@media (max-width: 500px) {
+
+    .search-overlay {
+        padding: 90px 16px 16px;
+    }
+
+
+    .search-box input {
+        padding: 18px 20px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   32. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

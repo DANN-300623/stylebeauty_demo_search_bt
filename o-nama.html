@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O nama | STIL Beauty Salon</title>
+
+    <meta name="description" content="Upoznajte STIL Beauty Salon — posvećeni lepoti, nezi i prijatnoj atmosferi.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo" aria-label="STIL Beauty Salon - Početna">
+
+            <span class="logo-main">
+                STIL
+            </span>
+
+            <span class="logo-sub">
+                beauty & care
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="index.html" class="nav-link">
+                Početna
+            </a>
+
+
+            <div class="nav-dropdown">
+
+                <a href="usluge.html" class="nav-link dropdown-trigger">
+
+                    Usluge
+
+                    <span class="dropdown-arrow">
+                        ⌄
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="nega-lica.html">
+                        Nega lica
+                    </a>
+
+                    <a href="nokti.html">
+                        Nokti & manikir
+                    </a>
+
+                    <a href="pedikir.html">
+                        Pedikir
+                    </a>
+
+                    <a href="obrve-trepavice.html">
+                        Obrve & trepavice
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="galerija.html" class="nav-link">
+                Galerija
+            </a>
+
+
+            <a href="o-nama.html" class="nav-link active">
+                O nama
+            </a>
+
+
+            <a href="cenovnik.html" class="nav-link">
+                Cenovnik
+            </a>
+
+
+            <a href="kontakt.html" class="nav-link">
+                Kontakt
+            </a>
+
+
+            <a href="kontakt.html" class="nav-cta">
+                Zakaži termin
+            </a>
+
+        </nav>
+
+
+        <button
+            class="search-toggle"
+            id="searchToggle"
+            aria-label="Pretraga"
+        >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Otvori meni"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+<!-- =========================================================
+     SEARCH OVERLAY
+========================================================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <div class="search-box">
+
+        <div class="search-box-top">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Pretraži sajt..."
+                autocomplete="off"
+            >
+
+            <button class="search-close" id="searchClose" aria-label="Zatvori pretragu">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="search-results" id="searchResults"></div>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero about-page-hero">
+
+    <div class="page-hero-decoration page-hero-decoration-one"></div>
+
+    <div class="page-hero-decoration page-hero-decoration-two"></div>
+
+
+    <div class="container">
+
+        <div class="page-hero-content reveal">
+
+            <span class="section-kicker">
+                STIL • O NAMA
+            </span>
+
+
+            <h1>
+                Nega sa pažnjom.
+                <em>Za tebe.</em>
+            </h1>
+
+
+            <p>
+                Mesto gde dolaziš da se središ,
+                ali i da se osećaš prijatno.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STORY
+========================================================= -->
+
+<section class="about-story section">
+
+    <div class="container about-story-grid">
+
+
+        <!-- VISUAL -->
+
+        <div class="about-story-visual reveal">
+
+            <div class="about-image-placeholder">
+
+                <span class="about-image-script">
+                    STIL
+                </span>
+
+                <span class="about-image-caption">
+                    beauty & care
+                </span>
+
+            </div>
+
+
+            <div class="about-stamp">
+
+                <span>
+                    YOUR
+                </span>
+
+                <strong>
+                    STIL
+                </strong>
+
+                <span>
+                    YOUR
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="about-story-content reveal">
+
+            <span class="section-kicker">
+                NAŠA PRIČA
+            </span>
+
+
+            <h2>
+                STIL je nastao iz
+                ljubavi prema <em>lepoti.</em>
+            </h2>
+
+
+            <div class="gold-divider"></div>
+
+
+            <p class="large-text">
+                Verujemo u ličan pristup.
+            </p>
+
+
+            <p>
+                Poznaješ osobu koja te dočekuje, a svaki
+                tretman je posvećen tebi — ne rasporedu.
+                Kod nas možeš da se opustiš bez osećaja
+                da si samo još jedan termin u danu.
+            </p>
+
+
+            <p>
+                Volimo lepe detalje, uredne nokte, negovanu kožu,
+                lepo oblikovane obrve i onaj osećaj kada izađeš
+                iz salona i pomisliš:
+                <strong>
+                    "E, sad sam baš sređena."
+                </strong>
+            </p>
+
+
+            <p>
+                Zato smo sve spojili pod jednim imenom —
+                <strong>STIL.</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GREEN SALON SECTION
+========================================================= -->
+
+<section class="green-salon-section section">
+
+    <div class="container">
+
+        <div class="green-salon-card reveal">
+
+
+            <div class="green-salon-content">
+
+                <span class="section-kicker">
+                    NAŠ KUTAK
+                </span>
+
+
+                <h2>
+                    Možda spolja
+                    nije <em>luksuzni spa.</em>
+                </h2>
+
+
+                <p>
+                    I upravo je to deo našeg šarma.
+                </p>
+
+
+                <p>
+                    Naš zeleni salon je mali, topao i stvaran.
+                    Nema potrebe da se pretvaramo da smo nešto
+                    što nismo.
+                </p>
+
+
+                <p>
+                    Kod nas je najvažnije da se ti osećaš
+                    dobrodošlo.
+                </p>
+
+
+                <div class="green-salon-signature">
+
+                    <span>
+                        Dobrodošla u
+                    </span>
+
+                    <strong>
+                        STIL
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="green-salon-visual">
+
+                <div class="green-building-placeholder">
+
+                    <span class="building-window window-one"></span>
+
+                    <span class="building-window window-two"></span>
+
+                    <span class="building-door"></span>
+
+                    <span class="building-sign">
+                        STIL
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section class="values-section section">
+
+    <div class="container">
+
+
+        <div class="section-heading centered reveal">
+
+            <span class="section-kicker">
+                ZAŠTO STIL
+            </span>
+
+
+            <h2>
+                Ono što nam je
+                <em>važno.</em>
+            </h2>
+
+
+            <p>
+                Nisu nam važni samo rezultati tretmana,
+                već i osećaj koji nosiš sa sobom kada odeš.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <article class="value-card reveal">
+
+                <span class="value-number">
+                    01
+                </span>
+
+
+                <div class="value-icon">
+                    ♡
+                </div>
+
+
+                <h3>
+                    Pažnja
+                </h3>
+
+
+                <p>
+                    Svaka osoba je drugačija.
+                    Zato i pristup treba da bude ličan.
+                </p>
+
+            </article>
+
+
+            <article class="value-card reveal">
+
+                <span class="value-number">
+                    02
+                </span>
+
+
+                <div class="value-icon">
+                    ✦
+                </div>
+
+
+                <h3>
+                    Urednost
+                </h3>
+
+
+                <p>
+                    Volimo čist, negovan i prirodan izgled
+                    koji traje i van salona.
+                </p>
+
+            </article>
+
+
+            <article class="value-card reveal">
+
+                <span class="value-number">
+                    03
+                </span>
+
+
+                <div class="value-icon">
+                    ◌
+                </div>
+
+
+                <h3>
+                    Opuštenost
+                </h3>
+
+
+                <p>
+                    Kod nas nema žurbe. Tvoj termin je
+                    vreme koje odvajaš za sebe.
+                </p>
+
+            </article>
+
+
+            <article class="value-card reveal">
+
+                <span class="value-number">
+                    04
+                </span>
+
+
+                <div class="value-icon">
+                    ◎
+                </div>
+
+
+                <h3>
+                    STIL
+                </h3>
+
+
+                <p>
+                    Ne želimo da svi izgledaju isto.
+                    Želimo da svako pronađe svoj stil.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PERSONAL MESSAGE
+========================================================= -->
+
+<section class="about-quote-section section">
+
+    <div class="container">
+
+        <div class="about-quote reveal">
+
+            <span class="quote-mark">
+                “
+            </span>
+
+
+            <blockquote>
+                Lepota nije u tome da izgledaš
+                kao neko drugi.
+                <br>
+                Lepota je kada pogledaš sebe
+                i kažeš — <em>ovo sam ja.”</em>
+            </blockquote>
+
+
+            <div class="quote-line"></div>
+
+
+            <span class="quote-signature">
+                STIL
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES MINI
+========================================================= -->
+
+<section class="about-services section">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="section-kicker">
+                ŠTA RADIMO
+            </span>
+
+
+            <h2>
+                Sve na jednom mestu,
+                <em>bez komplikovanja.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="about-services-list">
+
+
+            <a
+                href="nega-lica.html"
+                class="about-service-item reveal"
+            >
+
+                <span class="about-service-number">
+                    01
+                </span>
+
+                <span class="about-service-name">
+                    Nega lica
+                </span>
+
+                <span class="about-service-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="nokti.html"
+                class="about-service-item reveal"
+            >
+
+                <span class="about-service-number">
+                    02
+                </span>
+
+                <span class="about-service-name">
+                    Nokti & manikir
+                </span>
+
+                <span class="about-service-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="pedikir.html"
+                class="about-service-item reveal"
+            >
+
+                <span class="about-service-number">
+                    03
+                </span>
+
+                <span class="about-service-name">
+                    Pedikir
+                </span>
+
+                <span class="about-service-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="obrve-trepavice.html"
+                class="about-service-item reveal"
+            >
+
+                <span class="about-service-number">
+                    04
+                </span>
+
+                <span class="about-service-name">
+                    Obrve & trepavice
+                </span>
+
+                <span class="about-service-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section section">
+
+    <div class="container">
+
+        <div class="cta-box reveal">
+
+            <div class="cta-decoration">
+                ♡
+            </div>
+
+
+            <span class="section-kicker">
+                DOBRODOŠLA
+            </span>
+
+
+            <h2>
+                Dođi da upoznaš
+                <em>STIL.</em>
+            </h2>
+
+
+            <p>
+                Rezerviši termin i svrati u naš mali
+                salon iz komšiluka.
+            </p>
+
+
+            <a href="kontakt.html" class="btn btn-primary">
+
+                Zakaži termin
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    <span>
+                        STIL
+                    </span>
+
+                    <small>
+                        beauty & care
+                    </small>
+
+                </a>
+
+
+                <p>
+                    Nega i lepota,
+                    sa pažnjom za detalj.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Navigacija
+                </h4>
+
+                <a href="index.html">
+                    Početna
+                </a>
+
+                <a href="usluge.html">
+                    Usluge
+                </a>
+
+                <a href="galerija.html">
+                    Galerija
+                </a>
+
+                <a href="o-nama.html">
+                    O nama
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Usluge
+                </h4>
+
+                <a href="nega-lica.html">
+                    Nega lica
+                </a>
+
+                <a href="nokti.html">
+                    Nokti & manikir
+                </a>
+
+                <a href="pedikir.html">
+                    Pedikir
+                </a>
+
+                <a href="obrve-trepavice.html">
+                    Obrve & trepavice
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Kontakt
+                </h4>
+
+                <p>
+                    Adresa salona
+                </p>
+
+                <a href="tel:+381000000000">
+                    +381 00 000 0000
+                </a>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="kontakt.html">
+                    Zakaži termin
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 STIL Beauty Salon
+            </span>
+
+            <span>
+                Made with care.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js_main.js"></script>
+
+</body>
+</html>
