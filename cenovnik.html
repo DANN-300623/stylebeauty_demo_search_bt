@@ -1,1144 +1,700 @@
 <!DOCTYPE html>
+
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cenovnik | STIL Beauty Salon</title>
-
-    <meta name="description" content="Cenovnik usluga STIL Beauty Salona — nega lica, nokti, pedikir, obrve i trepavice.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cenovnik | STIL Beauty Salon</title>
+<meta content="Cenovnik usluga STIL Beauty Salona — nega lica, nokti, pedikir, obrve i trepavice." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Nunito+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
-
 <body>
-
 <!-- =========================================================
      HEADER
 ========================================================= -->
-
 <header class="site-header" id="siteHeader">
-
-    <div class="container header-inner">
-
-        <a href="index.html" class="logo" aria-label="STIL Beauty Salon - Početna">
-
-            <span class="logo-main">
+<div class="container header-inner">
+<a aria-label="STIL Beauty Salon - Početna" class="logo" href="index.html">
+<span class="logo-main">
                 STIL
             </span>
-
-            <span class="logo-sub">
-                beauty & care
+<span class="logo-sub">
+                beauty &amp; care
             </span>
-
-        </a>
-
-
-        <nav class="main-nav" id="mainNav">
-
-            <a href="index.html" class="nav-link">
+</a>
+<nav class="main-nav" id="mainNav">
+<a class="nav-link" href="index.html">
                 Početna
             </a>
-
-
-            <div class="nav-dropdown">
-
-                <a href="usluge.html" class="nav-link dropdown-trigger">
+<div class="nav-dropdown">
+<a class="nav-link dropdown-trigger" href="usluge.html">
 
                     Usluge
 
                     <span class="dropdown-arrow">
                         ⌄
                     </span>
-
-                </a>
-
-
-                <div class="dropdown-menu">
-
-                    <a href="nega-lica.html">
+</a>
+<div class="dropdown-menu">
+<a href="nega-lica.html">
                         Nega lica
                     </a>
-
-                    <a href="nokti.html">
-                        Nokti & manikir
+<a href="nokti.html">
+                        Nokti &amp; manikir
                     </a>
-
-                    <a href="pedikir.html">
+<a href="pedikir.html">
                         Pedikir
                     </a>
-
-                    <a href="obrve-trepavice.html">
-                        Obrve & trepavice
+<a href="obrve-trepavice.html">
+                        Obrve &amp; trepavice
                     </a>
-
-                </div>
-
-            </div>
-
-
-            <a href="galerija.html" class="nav-link">
+</div>
+</div>
+<a class="nav-link" href="galerija.html">
                 Galerija
             </a>
-
-
-            <a href="o-nama.html" class="nav-link">
+<a class="nav-link" href="o-nama.html">
                 O nama
             </a>
-
-
-            <a href="cenovnik.html" class="nav-link active">
+<a class="nav-link active" href="cenovnik.html">
                 Cenovnik
             </a>
-
-
-            <a href="kontakt.html" class="nav-link">
+<a class="nav-link" href="kontakt.html">
                 Kontakt
             </a>
-
-
-            <a href="kontakt.html" class="nav-cta">
+<a class="nav-cta" href="kontakt.html">
                 Zakaži termin
             </a>
-
-        </nav>
-
-
-        <button
-            class="search-toggle"
-            id="searchToggle"
-            aria-label="Pretraga"
-        >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-        </button>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Otvori meni"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-
-
+</nav>
+<button aria-label="Pretraga" class="search-toggle" id="searchToggle">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+</button>
+<button aria-expanded="false" aria-label="Otvori meni" class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
 <!-- =========================================================
      SEARCH OVERLAY
 ========================================================= -->
-
 <div class="search-overlay" id="searchOverlay">
-
-    <div class="search-box">
-
-        <div class="search-box-top">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Pretraži sajt..."
-                autocomplete="off"
-            >
-
-            <button class="search-close" id="searchClose" aria-label="Zatvori pretragu">
+<div class="search-box">
+<div class="search-box-top">
+<input autocomplete="off" id="searchInput" placeholder="Pretraži sajt..." type="text"/>
+<button aria-label="Zatvori pretragu" class="search-close" id="searchClose">
                 ✕
             </button>
-
-        </div>
-
-        <div class="search-results" id="searchResults"></div>
-
-    </div>
-
 </div>
-
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>
 </header>
-
-
 <main>
-
 <!-- =========================================================
      PAGE HERO
 ========================================================= -->
-
-<section class="page-hero pricing-page-hero">
-
-    <div class="page-hero-decoration page-hero-decoration-one"></div>
-
-    <div class="page-hero-decoration page-hero-decoration-two"></div>
-
-
-    <div class="container">
-
-        <div class="page-hero-content reveal">
-
-            <span class="section-kicker">
+<section class="page-hero pricing-page-hero" id="jednostavno-bez-iznenadjenja">
+<div class="page-hero-decoration page-hero-decoration-one"></div>
+<div class="page-hero-decoration page-hero-decoration-two"></div>
+<div class="container">
+<div class="page-hero-content reveal">
+<span class="section-kicker">
                 STIL • CENOVNIK
             </span>
-
-
-            <h1>
+<h1>
                 Jednostavno,
                 <em>bez iznenađenja.</em>
-            </h1>
-
-
-            <p>
+</h1>
+<p>
                 Pogledaj usluge i pronađi ono što ti odgovara.
             </p>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      PRICING INTRO
 ========================================================= -->
-
-<section class="pricing-intro section">
-
-    <div class="container narrow-container">
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
+<section class="pricing-intro section" id="tvoj-stil-tvoj-izbor">
+<div class="container narrow-container">
+<div class="section-heading centered reveal">
+<span class="section-kicker">
                 CENE USLUGA
             </span>
-
-
-            <h2>
+<h2>
                 Tvoj STIL,
                 <em>tvoj izbor.</em>
-            </h2>
-
-
-            <div class="gold-divider"></div>
-
-
-            <p>
+</h2>
+<div class="gold-divider"></div>
+<p>
                 Cene ispod su primer strukture i mogu se
                 jednostavno zameniti stvarnim cenama salona.
             </p>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      PRICING NAV
 ========================================================= -->
-
-<section class="pricing-section section">
-
-    <div class="container">
-
-
-        <div class="pricing-tabs reveal">
-
-            <button
-                class="pricing-tab active"
-                data-price-category="face"
-                type="button"
-            >
+<section class="pricing-section section" id="nega-koja-prija">
+<div class="container">
+<div class="pricing-tabs reveal">
+<button class="pricing-tab active" data-price-category="face" type="button">
                 Nega lica
             </button>
-
-
-            <button
-                class="pricing-tab"
-                data-price-category="nails"
-                type="button"
-            >
+<button class="pricing-tab" data-price-category="nails" type="button">
                 Nokti
             </button>
-
-
-            <button
-                class="pricing-tab"
-                data-price-category="pedicure"
-                type="button"
-            >
+<button class="pricing-tab" data-price-category="pedicure" type="button">
                 Pedikir
             </button>
-
-
-            <button
-                class="pricing-tab"
-                data-price-category="eyes"
-                type="button"
-            >
-                Obrve & trepavice
+<button class="pricing-tab" data-price-category="eyes" type="button">
+                Obrve &amp; trepavice
             </button>
-
-        </div>
-
-
-        <!-- =====================================================
+</div>
+<!-- =====================================================
              FACE PRICES
         ====================================================== -->
-
-        <div
-            class="price-category active"
-            data-price-panel="face"
-        >
-
-            <div class="price-category-header reveal">
-
-                <span class="section-kicker">
+<div class="price-category active" data-price-panel="face">
+<div class="price-category-header reveal">
+<span class="section-kicker">
                     01 • NEGA LICA
                 </span>
-
-                <h2>
+<h2>
                     Nega koja
                     <em>prija.</em>
-                </h2>
-
-            </div>
-
-
-            <div class="price-list">
-
-
-                <div class="price-item reveal">
-
-                    <div class="price-item-number">
+</h2>
+</div>
+<div class="price-list">
+<div class="price-item reveal">
+<div class="price-item-number">
                         01
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Osnovni tretman lica
                         </h3>
-
-                        <p>
+<p>
                             Čišćenje i osnovna nega kože.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-
-                <div class="price-item reveal">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item reveal">
+<div class="price-item-number">
                         02
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Dubinsko čišćenje
                         </h3>
-
-                        <p>
+<p>
                             Detaljniji tretman prilagođen koži.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-
-                <div class="price-item reveal">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item reveal">
+<div class="price-item-number">
                         03
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Hidratantni tretman
                         </h3>
-
-                        <p>
+<p>
                             Nega i hidratacija za svežiji izgled.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-
-                <div class="price-item reveal">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item reveal">
+<div class="price-item-number">
                         04
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Tretman po preporuci
                         </h3>
-
-                        <p>
+<p>
                             Odabir tretmana prema potrebama kože.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================================
+</div>
+</div>
+</div>
+</div>
+<!-- =====================================================
              NAIL PRICES
         ====================================================== -->
-
-        <div
-            class="price-category"
-            data-price-panel="nails"
-        >
-
-            <div class="price-category-header">
-
-                <span class="section-kicker">
+<div class="price-category" data-price-panel="nails">
+<div class="price-category-header">
+<span class="section-kicker">
                     02 • NOKTI
                 </span>
-
-                <h2>
+<h2>
                     Uredni nokti,
                     <em>tvoj STIL.</em>
-                </h2>
-
-            </div>
-
-
-            <div class="price-list">
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</h2>
+</div>
+<div class="price-list">
+<div class="price-item">
+<div class="price-item-number">
                         01
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Klasičan manikir
                         </h3>
-
-                        <p>
+<p>
                             Uređivanje noktiju i zanoktica.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         02
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Gel lak
                         </h3>
-
-                        <p>
+<p>
                             Uredan i dugotrajniji izgled noktiju.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         03
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Korekcija
                         </h3>
-
-                        <p>
+<p>
                             Održavanje postojećeg manikira.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-                        <span>
+<span>
                             RSD
                         </span>
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         04
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Nail art
                         </h3>
-
-                        <p>
+<p>
                             Cena zavisi od odabranog dizajna.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             od XX
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================================
+</div>
+</div>
+</div>
+</div>
+<!-- =====================================================
              PEDICURE PRICES
         ====================================================== -->
-
-        <div
-            class="price-category"
-            data-price-panel="pedicure"
-        >
-
-            <div class="price-category-header">
-
-                <span class="section-kicker">
+<div class="price-category" data-price-panel="pedicure">
+<div class="price-category-header">
+<span class="section-kicker">
                     03 • PEDIKIR
                 </span>
-
-                <h2>
+<h2>
                     Nega za
                     <em>tvoja stopala.</em>
-                </h2>
-
-            </div>
-
-
-            <div class="price-list">
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</h2>
+</div>
+<div class="price-list">
+<div class="price-item">
+<div class="price-item-number">
                         01
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Klasičan pedikir
                         </h3>
-
-                        <p>
+<p>
                             Osnovna nega i uređivanje stopala.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         02
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Pedikir + lak
                         </h3>
-
-                        <p>
+<p>
                             Nega stopala i završni lak.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         03
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Pedikir + gel lak
                         </h3>
-
-                        <p>
+<p>
                             Nega uz dugotrajniju završnicu.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         04
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Nega stopala
                         </h3>
-
-                        <p>
+<p>
                             Dodatna nega kože stopala.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================================
+</div>
+</div>
+</div>
+</div>
+<!-- =====================================================
              BROWS / LASHES PRICES
         ====================================================== -->
-
-        <div
-            class="price-category"
-            data-price-panel="eyes"
-        >
-
-            <div class="price-category-header">
-
-                <span class="section-kicker">
-                    04 • OBRVE & TREPAVICE
+<div class="price-category" data-price-panel="eyes">
+<div class="price-category-header">
+<span class="section-kicker">
+                    04 • OBRVE &amp; TREPAVICE
                 </span>
-
-                <h2>
+<h2>
                     Istakni svoj
                     <em>pogled.</em>
-                </h2>
-
-            </div>
-
-
-            <div class="price-list">
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</h2>
+</div>
+<div class="price-list">
+<div class="price-item">
+<div class="price-item-number">
                         01
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Oblikovanje obrva
                         </h3>
-
-                        <p>
+<p>
                             Oblikovanje prema prirodnim proporcijama.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         02
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Farbanje obrva
                         </h3>
-
-                        <p>
+<p>
                             Naglašavanje i definisanje obrva.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         03
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Lash lift
                         </h3>
-
-                        <p>
+<p>
                             Podizanje i uvijanje prirodnih trepavica.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="price-item">
-
-                    <div class="price-item-number">
+</div>
+</div>
+<div class="price-item">
+<div class="price-item-number">
                         04
                     </div>
-
-                    <div class="price-item-info">
-
-                        <h3>
+<div class="price-item-info">
+<h3>
                             Obrve + trepavice
                         </h3>
-
-                        <p>
+<p>
                             Kombinovani tretman.
                         </p>
-
-                    </div>
-
-                    <div class="price-value">
-
-                        <strong>
+</div>
+<div class="price-value">
+<strong>
                             XX00
                         </strong>
-
-                        <span>
+<span>
                             RSD
                         </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      IMPORTANT NOTE
 ========================================================= -->
-
-<section class="pricing-note section">
-
-    <div class="container">
-
-        <div class="pricing-note-box reveal">
-
-            <span class="pricing-note-icon">
+<section class="pricing-note section" id="pricing-note">
+<div class="container">
+<div class="pricing-note-box reveal">
+<span class="pricing-note-icon">
                 ✦
             </span>
-
-
-            <div>
-
-                <h3>
+<div>
+<h3>
                     Važna napomena
                 </h3>
-
-                <p>
+<p>
                     Cene i trajanje tretmana mogu zavisiti od
                     vrste usluge i individualnih potreba.
                     Za više informacija slobodno nas kontaktiraj.
                 </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      CTA
 ========================================================= -->
-
-<section class="cta-section section">
-
-    <div class="container">
-
-        <div class="cta-box reveal">
-
-            <div class="cta-decoration">
+<section class="cta-section section" id="pronasla-si-svoj-tretman">
+<div class="container">
+<div class="cta-box reveal">
+<div class="cta-decoration">
                 ♡
             </div>
-
-
-            <span class="section-kicker">
+<span class="section-kicker">
                 STIL BEAUTY
             </span>
-
-
-            <h2>
+<h2>
                 Pronašla si svoj
                 <em>tretman?</em>
-            </h2>
-
-
-            <p>
+</h2>
+<p>
                 Rezerviši termin i vidimo se u STIL-u.
             </p>
-
-
-            <a href="kontakt.html" class="btn btn-primary">
+<a class="btn btn-primary" href="kontakt.html">
 
                 Zakaži termin
 
                 <span>
                     →
                 </span>
-
-            </a>
-
-        </div>
-
-    </div>
-
+</a>
+</div>
+</div>
 </section>
-
 </main>
-
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
-
 <footer class="site-footer">
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="footer-logo">
-
-                    <span>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="footer-logo" href="index.html">
+<span>
                         STIL
                     </span>
-
-                    <small>
-                        beauty & care
+<small>
+                        beauty &amp; care
                     </small>
-
-                </a>
-
-
-                <p>
+</a>
+<p>
                     Nega i lepota,
-                    sa pažnjom za detalj.
+                    na svoj način.
                 </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
+</div>
+<div class="footer-column">
+<h4>
                     Navigacija
                 </h4>
-
-                <a href="index.html">
+<a href="index.html">
                     Početna
                 </a>
-
-                <a href="usluge.html">
+<a href="usluge.html">
                     Usluge
                 </a>
-
-                <a href="galerija.html">
+<a href="galerija.html">
                     Galerija
                 </a>
-
-                <a href="o-nama.html">
+<a href="o-nama.html">
                     O nama
                 </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
+</div>
+<div class="footer-column">
+<h4>
                     Usluge
                 </h4>
-
-                <a href="nega-lica.html">
+<a href="nega-lica.html">
                     Nega lica
                 </a>
-
-                <a href="nokti.html">
-                    Nokti & manikir
+<a href="nokti.html">
+                    Nokti &amp; manikir
                 </a>
-
-                <a href="pedikir.html">
+<a href="pedikir.html">
                     Pedikir
                 </a>
-
-                <a href="obrve-trepavice.html">
-                    Obrve & trepavice
+<a href="obrve-trepavice.html">
+                    Obrve &amp; trepavice
                 </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
+</div>
+<div class="footer-column">
+<h4>
                     Kontakt
                 </h4>
-
-                <p>
+<p>
                     Adresa salona
                 </p>
-
-                <a href="tel:+381000000000">
+<a href="tel:+381000000000">
                     +381 00 000 0000
                 </a>
-
-                <a href="#">
+<a href="#">
                     Instagram
                 </a>
-
-                <a href="kontakt.html">
+<a href="kontakt.html">
                     Zakaži termin
                 </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
                 © 2026 STIL Beauty Salon
             </span>
-
-            <span>
+<span>
                 Made with care.
             </span>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </footer>
-
-
 <script src="js_main.js"></script>
-
 </body>
 </html>

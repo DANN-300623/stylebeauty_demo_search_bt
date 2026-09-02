@@ -1,789 +1,497 @@
 <!DOCTYPE html>
+
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Obrve & Trepavice | STIL Beauty Salon</title>
-
-    <meta name="description" content="Obrve i trepavice u STIL Beauty Salonu — oblikovanje, nega i isticanje prirodne lepote.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Obrve &amp; Trepavice | STIL Beauty Salon</title>
+<meta content="Obrve i trepavice u STIL Beauty Salonu — oblikovanje, nega i isticanje prirodne lepote." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Nunito+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
-
 <body>
-
 <!-- =========================================================
      HEADER
 ========================================================= -->
-
 <header class="site-header" id="siteHeader">
-
-    <div class="container header-inner">
-
-        <a href="index.html" class="logo" aria-label="STIL Beauty Salon - Početna">
-            <span class="logo-main">STIL</span>
-            <span class="logo-sub">beauty & care</span>
-        </a>
-
-        <nav class="main-nav" id="mainNav">
-
-            <a href="index.html" class="nav-link">
+<div class="container header-inner">
+<a aria-label="STIL Beauty Salon - Početna" class="logo" href="index.html">
+<span class="logo-main">STIL</span>
+<span class="logo-sub">beauty &amp; care</span>
+</a>
+<nav class="main-nav" id="mainNav">
+<a class="nav-link" href="index.html">
                 Početna
             </a>
-
-            <div class="nav-dropdown">
-
-                <a href="usluge.html" class="nav-link dropdown-trigger active">
+<div class="nav-dropdown">
+<a class="nav-link dropdown-trigger active" href="usluge.html">
                     Usluge
                     <span class="dropdown-arrow">⌄</span>
-                </a>
-
-                <div class="dropdown-menu">
-
-                    <a href="nega-lica.html">
+</a>
+<div class="dropdown-menu">
+<a href="nega-lica.html">
                         Nega lica
                     </a>
-
-                    <a href="nokti.html">
-                        Nokti & manikir
+<a href="nokti.html">
+                        Nokti &amp; manikir
                     </a>
-
-                    <a href="pedikir.html">
+<a href="pedikir.html">
                         Pedikir
                     </a>
-
-                    <a href="obrve-trepavice.html" class="active">
-                        Obrve & trepavice
+<a class="active" href="obrve-trepavice.html">
+                        Obrve &amp; trepavice
                     </a>
-
-                </div>
-
-            </div>
-
-            <a href="galerija.html" class="nav-link">
+</div>
+</div>
+<a class="nav-link" href="galerija.html">
                 Galerija
             </a>
-
-            <a href="o-nama.html" class="nav-link">
+<a class="nav-link" href="o-nama.html">
                 O nama
             </a>
-
-            <a href="cenovnik.html" class="nav-link">
+<a class="nav-link" href="cenovnik.html">
                 Cenovnik
             </a>
-
-            <a href="kontakt.html" class="nav-link">
+<a class="nav-link" href="kontakt.html">
                 Kontakt
             </a>
-
-            <a href="kontakt.html" class="nav-cta">
+<a class="nav-cta" href="kontakt.html">
                 Zakaži termin
             </a>
-
-        </nav>
-
-
-        <button
-            class="search-toggle"
-            id="searchToggle"
-            aria-label="Pretraga"
-        >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-        </button>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Otvori meni"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
-
-
-
+</nav>
+<button aria-label="Pretraga" class="search-toggle" id="searchToggle">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+</button>
+<button aria-expanded="false" aria-label="Otvori meni" class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
 <!-- =========================================================
      SEARCH OVERLAY
 ========================================================= -->
-
 <div class="search-overlay" id="searchOverlay">
-
-    <div class="search-box">
-
-        <div class="search-box-top">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Pretraži sajt..."
-                autocomplete="off"
-            >
-
-            <button class="search-close" id="searchClose" aria-label="Zatvori pretragu">
+<div class="search-box">
+<div class="search-box-top">
+<input autocomplete="off" id="searchInput" placeholder="Pretraži sajt..." type="text"/>
+<button aria-label="Zatvori pretragu" class="search-close" id="searchClose">
                 ✕
             </button>
-
-        </div>
-
-        <div class="search-results" id="searchResults"></div>
-
-    </div>
-
 </div>
-
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>
 </header>
-
-
 <main>
-
 <!-- =========================================================
      HERO
 ========================================================= -->
-
-<section class="service-detail-hero eyes-hero">
-
-    <div class="container service-detail-grid">
-
-        <div class="service-detail-content reveal">
-
-            <span class="section-kicker">
-                STIL • BROWS & LASHES
+<section class="service-detail-hero eyes-hero" id="pogled-koji-govori-sam-za-sebe">
+<div class="container service-detail-grid">
+<div class="service-detail-content reveal">
+<span class="section-kicker">
+                STIL • BROWS &amp; LASHES
             </span>
-
-            <h1>
+<h1>
                 Pogled koji
                 govori <em>sam za sebe.</em>
-            </h1>
-
-            <p>
+</h1>
+<p>
                 Obrve i trepavice su mali detalji koji mogu
                 potpuno promeniti izgled lica. Istakni ono
                 što već imaš.
             </p>
-
-            <a href="kontakt.html" class="btn btn-primary">
+<a class="btn btn-primary" href="kontakt.html">
                 Zakaži termin
                 <span>→</span>
-            </a>
-
-        </div>
-
-
-        <div class="service-detail-visual reveal">
-
-            <div class="detail-image-placeholder eyes-placeholder">
-
-                <div class="eye-decoration">
-
-                    <span class="brow-line"></span>
-
-                    <span class="lash-line lash-one"></span>
-                    <span class="lash-line lash-two"></span>
-                    <span class="lash-line lash-three"></span>
-
-                </div>
-
-                <span class="detail-script">
+</a>
+</div>
+<div class="service-detail-visual reveal">
+<div class="detail-image-placeholder eyes-placeholder">
+<div class="eye-decoration">
+<span class="brow-line"></span>
+<span class="lash-line lash-one"></span>
+<span class="lash-line lash-two"></span>
+<span class="lash-line lash-three"></span>
+</div>
+<span class="detail-script">
                     beauty
                 </span>
-
-                <span class="detail-brand">
+<span class="detail-brand">
                     STIL
                 </span>
-
-            </div>
-
-            <div class="detail-gold-circle">
+</div>
+<div class="detail-gold-circle">
                 ✦
             </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      INTRO
 ========================================================= -->
-
-<section class="service-intro section">
-
-    <div class="container narrow-container">
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
-                OBRVE & TREPAVICE
+<section class="service-intro section" id="nekad-je-dovoljan-samo-jedan-detalj">
+<div class="container narrow-container">
+<div class="section-heading centered reveal">
+<span class="section-kicker">
+                OBRVE &amp; TREPAVICE
             </span>
-
-            <h2>
+<h2>
                 Nekad je dovoljan
                 samo <em>jedan detalj.</em>
-            </h2>
-
-            <div class="gold-divider"></div>
-
-            <p>
+</h2>
+<div class="gold-divider"></div>
+<p>
                 Lepo oblikovane obrve i naglašene trepavice
                 mogu dati licu svežiji i odmorniji izgled,
                 bez mnogo dodatnog truda.
             </p>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      SERVICES
 ========================================================= -->
-
-<section class="treatments-section section">
-
-    <div class="container">
-
-        <div class="section-heading reveal">
-
-            <span class="section-kicker">
+<section class="treatments-section section" id="suptilno-ili-naglaseno">
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-kicker">
                 USLUGE
             </span>
-
-            <h2>
+<h2>
                 Suptilno ili
                 <em>naglašeno.</em>
-            </h2>
-
-            <p>
+</h2>
+<p>
                 Izaberi tretman prema svom stilu i željenom
                 efektu.
             </p>
-
-        </div>
-
-
-        <div class="treatments-list">
-
-
-            <!-- 01 -->
-
-            <article class="treatment-card reveal">
-
-                <div class="treatment-index">
+</div>
+<div class="treatments-list">
+<!-- 01 -->
+<article class="treatment-card reveal">
+<div class="treatment-index">
                     01
                 </div>
-
-                <div class="treatment-main">
-
-                    <h3>
+<div class="treatment-main">
+<h3>
                         Oblikovanje obrva
                     </h3>
-
-                    <p>
+<p>
                         Uređivanje i oblikovanje obrva prema
                         prirodnom obliku lica.
                     </p>
-
-                </div>
-
-                <div class="treatment-meta">
-
-                    <span>
+</div>
+<div class="treatment-meta">
+<span>
                         Trajanje: po dogovoru
                     </span>
-
-                    <strong>
+<strong>
                         Cena po dogovoru
                     </strong>
-
-                </div>
-
-                <a href="kontakt.html" class="treatment-arrow">
+</div>
+<a class="treatment-arrow" href="kontakt.html">
                     →
                 </a>
-
-            </article>
-
-
-            <!-- 02 -->
-
-            <article class="treatment-card reveal">
-
-                <div class="treatment-index">
+</article>
+<!-- 02 -->
+<article class="treatment-card reveal">
+<div class="treatment-index">
                     02
                 </div>
-
-                <div class="treatment-main">
-
-                    <h3>
+<div class="treatment-main">
+<h3>
                         Farbanje obrva
                     </h3>
-
-                    <p>
+<p>
                         Naglašavanje obrva uz odabir nijanse
                         koja odgovara tvom izgledu.
                     </p>
-
-                </div>
-
-                <div class="treatment-meta">
-
-                    <span>
+</div>
+<div class="treatment-meta">
+<span>
                         Trajanje: po dogovoru
                     </span>
-
-                    <strong>
+<strong>
                         Cena po dogovoru
                     </strong>
-
-                </div>
-
-                <a href="kontakt.html" class="treatment-arrow">
+</div>
+<a class="treatment-arrow" href="kontakt.html">
                     →
                 </a>
-
-            </article>
-
-
-            <!-- 03 -->
-
-            <article class="treatment-card reveal">
-
-                <div class="treatment-index">
+</article>
+<!-- 03 -->
+<article class="treatment-card reveal">
+<div class="treatment-index">
                     03
                 </div>
-
-                <div class="treatment-main">
-
-                    <h3>
+<div class="treatment-main">
+<h3>
                         Lash lift
                     </h3>
-
-                    <p>
+<p>
                         Podizanje i uvijanje prirodnih trepavica
                         za otvoreniji pogled.
                     </p>
-
-                </div>
-
-                <div class="treatment-meta">
-
-                    <span>
+</div>
+<div class="treatment-meta">
+<span>
                         Trajanje: po dogovoru
                     </span>
-
-                    <strong>
+<strong>
                         Cena po dogovoru
                     </strong>
-
-                </div>
-
-                <a href="kontakt.html" class="treatment-arrow">
+</div>
+<a class="treatment-arrow" href="kontakt.html">
                     →
                 </a>
-
-            </article>
-
-
-            <!-- 04 -->
-
-            <article class="treatment-card reveal">
-
-                <div class="treatment-index">
+</article>
+<!-- 04 -->
+<article class="treatment-card reveal">
+<div class="treatment-index">
                     04
                 </div>
-
-                <div class="treatment-main">
-
-                    <h3>
+<div class="treatment-main">
+<h3>
                         Farbanje trepavica
                     </h3>
-
-                    <p>
+<p>
                         Diskretno naglašavanje prirodne boje
                         trepavica.
                     </p>
-
-                </div>
-
-                <div class="treatment-meta">
-
-                    <span>
+</div>
+<div class="treatment-meta">
+<span>
                         Trajanje: po dogovoru
                     </span>
-
-                    <strong>
+<strong>
                         Cena po dogovoru
                     </strong>
-
-                </div>
-
-                <a href="kontakt.html" class="treatment-arrow">
+</div>
+<a class="treatment-arrow" href="kontakt.html">
                     →
                 </a>
-
-            </article>
-
-
-            <!-- 05 -->
-
-            <article class="treatment-card reveal">
-
-                <div class="treatment-index">
+</article>
+<!-- 05 -->
+<article class="treatment-card reveal">
+<div class="treatment-index">
                     05
                 </div>
-
-                <div class="treatment-main">
-
-                    <h3>
+<div class="treatment-main">
+<h3>
                         Obrve + trepavice
                     </h3>
-
-                    <p>
+<p>
                         Kombinacija tretmana za kompletno
                         sređivanje pogleda.
                     </p>
-
-                </div>
-
-                <div class="treatment-meta">
-
-                    <span>
+</div>
+<div class="treatment-meta">
+<span>
                         Trajanje: po dogovoru
                     </span>
-
-                    <strong>
+<strong>
                         Cena po dogovoru
                     </strong>
-
-                </div>
-
-                <a href="kontakt.html" class="treatment-arrow">
+</div>
+<a class="treatment-arrow" href="kontakt.html">
                     →
                 </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
+</article>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      BEFORE / AFTER CONCEPT
 ========================================================= -->
-
-<section class="brows-result-section section">
-
-    <div class="container">
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
+<section class="brows-result-section section" id="manje-je-cesto-vise">
+<div class="container">
+<div class="section-heading centered reveal">
+<span class="section-kicker">
                 PRIRODAN EFEKAT
             </span>
-
-            <h2>
+<h2>
                 Manje je često
                 <em>više.</em>
-            </h2>
-
-            <p>
+</h2>
+<p>
                 Cilj nije da promenimo tvoje lice,
                 već da istaknemo ono što je već lepo.
             </p>
-
-        </div>
-
-
-        <div class="result-grid">
-
-            <div class="result-card reveal">
-
-                <div class="result-placeholder result-before">
-
-                    <span>
+</div>
+<div class="result-grid">
+<div class="result-card reveal">
+<div class="result-placeholder result-before">
+<span>
                         NATURAL
                     </span>
-
-                </div>
-
-                <div class="result-label">
+</div>
+<div class="result-label">
                     Prirodno
                 </div>
-
-            </div>
-
-
-            <div class="result-arrow reveal">
+</div>
+<div class="result-arrow reveal">
                 →
             </div>
-
-
-            <div class="result-card reveal">
-
-                <div class="result-placeholder result-after">
-
-                    <span>
+<div class="result-card reveal">
+<div class="result-placeholder result-after">
+<span>
                         STIL
                     </span>
-
-                </div>
-
-                <div class="result-label">
+</div>
+<div class="result-label">
                     STIL efekat
                 </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      TIPS
 ========================================================= -->
-
-<section class="tips-section section">
-
-    <div class="container">
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
+<section class="tips-section section" id="obrve-su-okvir-lica">
+<div class="container">
+<div class="section-heading centered reveal">
+<span class="section-kicker">
                 MALI SAVET
             </span>
-
-            <h2>
+<h2>
                 Obrve su
                 <em>okvir lica.</em>
-            </h2>
-
-        </div>
-
-
-        <div class="tips-grid">
-
-            <div class="tip-card reveal">
-
-                <span class="tip-number">
+</h2>
+</div>
+<div class="tips-grid">
+<div class="tip-card reveal">
+<span class="tip-number">
                     01
                 </span>
-
-                <h3>
+<h3>
                     Ne preteruj sa oblikom
                 </h3>
-
-                <p>
+<p>
                     Prirodan oblik često najbolje prati
                     proporcije tvog lica.
                 </p>
-
-            </div>
-
-
-            <div class="tip-card reveal">
-
-                <span class="tip-number">
+</div>
+<div class="tip-card reveal">
+<span class="tip-number">
                     02
                 </span>
-
-                <h3>
+<h3>
                     Biraj nijansu pažljivo
                 </h3>
-
-                <p>
+<p>
                     Cilj je da obrve izgledaju skladno
                     sa celokupnim izgledom.
                 </p>
-
-            </div>
-
-
-            <div class="tip-card reveal">
-
-                <span class="tip-number">
+</div>
+<div class="tip-card reveal">
+<span class="tip-number">
                     03
                 </span>
-
-                <h3>
+<h3>
                     Neguj trepavice
                 </h3>
-
-                <p>
+<p>
                     Nežna svakodnevna nega može pomoći
                     da trepavice izgledaju uredno.
                 </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      CTA
 ========================================================= -->
-
-<section class="cta-section section">
-
-    <div class="container">
-
-        <div class="cta-box reveal">
-
-            <div class="cta-decoration">
+<section class="cta-section section" id="istakni-svoj-pogled">
+<div class="container">
+<div class="cta-box reveal">
+<div class="cta-decoration">
                 ✦
             </div>
-
-            <span class="section-kicker">
-                BROWS & LASHES
+<span class="section-kicker">
+                BROWS &amp; LASHES
             </span>
-
-            <h2>
+<h2>
                 Istakni svoj
                 <em>pogled.</em>
-            </h2>
-
-            <p>
+</h2>
+<p>
                 Zakaži termin i pronađi tretman koji
                 odgovara tvom stilu.
             </p>
-
-            <a href="kontakt.html" class="btn btn-primary">
+<a class="btn btn-primary" href="kontakt.html">
                 Zakaži termin
                 <span>→</span>
-            </a>
-
-        </div>
-
-    </div>
-
+</a>
+</div>
+</div>
 </section>
-
 </main>
-
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
-
 <footer class="site-footer">
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="footer-logo">
-
-                    <span>STIL</span>
-
-                    <small>
-                        beauty & care
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="footer-logo" href="index.html">
+<span>STIL</span>
+<small>
+                        beauty &amp; care
                     </small>
-
-                </a>
-
-                <p>
+</a>
+<p>
                     Nega i lepota,
-                    sa pažnjom za detalj.
+                    na svoj način.
                 </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Navigacija</h4>
-
-                <a href="index.html">Početna</a>
-                <a href="usluge.html">Usluge</a>
-                <a href="galerija.html">Galerija</a>
-                <a href="o-nama.html">O nama</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Usluge</h4>
-
-                <a href="nega-lica.html">Nega lica</a>
-                <a href="nokti.html">Nokti & manikir</a>
-                <a href="pedikir.html">Pedikir</a>
-                <a href="obrve-trepavice.html">Obrve & trepavice</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Kontakt</h4>
-
-                <p>
+</div>
+<div class="footer-column">
+<h4>Navigacija</h4>
+<a href="index.html">Početna</a>
+<a href="usluge.html">Usluge</a>
+<a href="galerija.html">Galerija</a>
+<a href="o-nama.html">O nama</a>
+</div>
+<div class="footer-column">
+<h4>Usluge</h4>
+<a href="nega-lica.html">Nega lica</a>
+<a href="nokti.html">Nokti &amp; manikir</a>
+<a href="pedikir.html">Pedikir</a>
+<a href="obrve-trepavice.html">Obrve &amp; trepavice</a>
+</div>
+<div class="footer-column">
+<h4>Kontakt</h4>
+<p>
                     Adresa salona
                 </p>
-
-                <a href="tel:+381000000000">
+<a href="tel:+381000000000">
                     +381 00 000 0000
                 </a>
-
-                <a href="#">
+<a href="#">
                     Instagram
                 </a>
-
-                <a href="kontakt.html">
+<a href="kontakt.html">
                     Zakaži termin
                 </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
                 © 2026 STIL Beauty Salon
             </span>
-
-            <span>
+<span>
                 Made with care.
             </span>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </footer>
-
-
 <script src="js_main.js"></script>
-
 </body>
 </html>

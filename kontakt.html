@@ -1,1023 +1,564 @@
 <!DOCTYPE html>
+
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kontakt | STIL Beauty Salon</title>
-
-    <meta name="description" content="Kontaktirajte STIL Beauty Salon i zakažite svoj termin za negu lica, nokte, pedikir, obrve i trepavice.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kontakt | STIL Beauty Salon</title>
+<meta content="Kontaktirajte STIL Beauty Salon i zakažite svoj termin za negu lica, nokte, pedikir, obrve i trepavice." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Nunito+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
-
 <body>
-
 <!-- =========================================================
      HEADER
 ========================================================= -->
-
 <header class="site-header" id="siteHeader">
-
-    <div class="container header-inner">
-
-        <a href="index.html" class="logo" aria-label="STIL Beauty Salon - Početna">
-
-            <span class="logo-main">
+<div class="container header-inner">
+<a aria-label="STIL Beauty Salon - Početna" class="logo" href="index.html">
+<span class="logo-main">
                 STIL
             </span>
-
-            <span class="logo-sub">
-                beauty & care
+<span class="logo-sub">
+                beauty &amp; care
             </span>
-
-        </a>
-
-
-        <nav class="main-nav" id="mainNav">
-
-            <a href="index.html" class="nav-link">
+</a>
+<nav class="main-nav" id="mainNav">
+<a class="nav-link" href="index.html">
                 Početna
             </a>
-
-
-            <div class="nav-dropdown">
-
-                <a href="usluge.html" class="nav-link dropdown-trigger">
+<div class="nav-dropdown">
+<a class="nav-link dropdown-trigger" href="usluge.html">
 
                     Usluge
 
                     <span class="dropdown-arrow">
                         ⌄
                     </span>
-
-                </a>
-
-
-                <div class="dropdown-menu">
-
-                    <a href="nega-lica.html">
+</a>
+<div class="dropdown-menu">
+<a href="nega-lica.html">
                         Nega lica
                     </a>
-
-                    <a href="nokti.html">
-                        Nokti & manikir
+<a href="nokti.html">
+                        Nokti &amp; manikir
                     </a>
-
-                    <a href="pedikir.html">
+<a href="pedikir.html">
                         Pedikir
                     </a>
-
-                    <a href="obrve-trepavice.html">
-                        Obrve & trepavice
+<a href="obrve-trepavice.html">
+                        Obrve &amp; trepavice
                     </a>
-
-                </div>
-
-            </div>
-
-
-            <a href="galerija.html" class="nav-link">
+</div>
+</div>
+<a class="nav-link" href="galerija.html">
                 Galerija
             </a>
-
-
-            <a href="o-nama.html" class="nav-link">
+<a class="nav-link" href="o-nama.html">
                 O nama
             </a>
-
-
-            <a href="cenovnik.html" class="nav-link">
+<a class="nav-link" href="cenovnik.html">
                 Cenovnik
             </a>
-
-
-            <a href="kontakt.html" class="nav-link active">
+<a class="nav-link active" href="kontakt.html">
                 Kontakt
             </a>
-
-
-            <a href="#zakazivanje" class="nav-cta">
+<a class="nav-cta" href="#zakazivanje">
                 Zakaži termin
             </a>
-
-        </nav>
-
-
-        <button
-            class="search-toggle"
-            id="searchToggle"
-            aria-label="Pretraga"
-        >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="7"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-        </button>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Otvori meni"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-
-
+</nav>
+<button aria-label="Pretraga" class="search-toggle" id="searchToggle">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+</button>
+<button aria-expanded="false" aria-label="Otvori meni" class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
 <!-- =========================================================
      SEARCH OVERLAY
 ========================================================= -->
-
 <div class="search-overlay" id="searchOverlay">
-
-    <div class="search-box">
-
-        <div class="search-box-top">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Pretraži sajt..."
-                autocomplete="off"
-            >
-
-            <button class="search-close" id="searchClose" aria-label="Zatvori pretragu">
+<div class="search-box">
+<div class="search-box-top">
+<input autocomplete="off" id="searchInput" placeholder="Pretraži sajt..." type="text"/>
+<button aria-label="Zatvori pretragu" class="search-close" id="searchClose">
                 ✕
             </button>
-
-        </div>
-
-        <div class="search-results" id="searchResults"></div>
-
-    </div>
-
 </div>
-
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>
 </header>
-
-
 <main>
-
 <!-- =========================================================
      PAGE HERO
 ========================================================= -->
-
-<section class="page-hero contact-page-hero">
-
-    <div class="page-hero-decoration page-hero-decoration-one"></div>
-
-    <div class="page-hero-decoration page-hero-decoration-two"></div>
-
-
-    <div class="container">
-
-        <div class="page-hero-content reveal">
-
-            <span class="section-kicker">
+<section class="page-hero contact-page-hero" id="hajde-da-se-upoznamo">
+<div class="page-hero-decoration page-hero-decoration-one"></div>
+<div class="page-hero-decoration page-hero-decoration-two"></div>
+<div class="container">
+<div class="page-hero-content reveal">
+<span class="section-kicker">
                 STIL • KONTAKT
             </span>
-
-
-            <h1>
+<h1>
                 Hajde da
                 <em>se upoznamo.</em>
-            </h1>
-
-
-            <p>
+</h1>
+<p>
                 Imaš pitanje, želiš termin ili samo želiš
                 da saznaš šta bi ti najviše odgovaralo?
                 Piši nam.
             </p>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      CONTACT MAIN
 ========================================================= -->
-
-<section class="contact-main section">
-
-    <div class="container contact-grid">
-
-
-        <!-- =================================================
+<section class="contact-main section" id="svrati-u-nas-stil">
+<div class="container contact-grid">
+<!-- =================================================
              CONTACT INFO
         ================================================== -->
-
-        <div class="contact-info reveal">
-
-            <span class="section-kicker">
+<div class="contact-info reveal">
+<span class="section-kicker">
                 GDE SMO
             </span>
-
-
-            <h2>
+<h2>
                 Svrati u naš
                 <em>STIL.</em>
-            </h2>
-
-
-            <p class="contact-intro">
+</h2>
+<p class="contact-intro">
                 Svrati na kratak predah
                 od svakodnevice.
             </p>
-
-
-            <div class="contact-details">
-
-
-                <!-- ADDRESS -->
-
-                <div class="contact-detail">
-
-                    <div class="contact-detail-icon">
+<div class="contact-details">
+<!-- ADDRESS -->
+<div class="contact-detail">
+<div class="contact-detail-icon">
                         ⌖
                     </div>
-
-                    <div>
-
-                        <span>
+<div>
+<span>
                             Adresa
                         </span>
-
-                        <strong>
+<strong>
                             Ulica i broj
                         </strong>
-
-                        <p>
+<p>
                             Grad, Srbija
                         </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PHONE -->
-
-                <div class="contact-detail">
-
-                    <div class="contact-detail-icon">
+</div>
+</div>
+<!-- PHONE -->
+<div class="contact-detail">
+<div class="contact-detail-icon">
                         ☎
                     </div>
-
-                    <div>
-
-                        <span>
+<div>
+<span>
                             Telefon
                         </span>
-
-                        <a href="tel:+381000000000">
+<a href="tel:+381000000000">
                             +381 00 000 0000
                         </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- INSTAGRAM -->
-
-                <div class="contact-detail">
-
-                    <div class="contact-detail-icon">
+</div>
+</div>
+<!-- INSTAGRAM -->
+<div class="contact-detail">
+<div class="contact-detail-icon">
                         ◎
                     </div>
-
-                    <div>
-
-                        <span>
+<div>
+<span>
                             Instagram
                         </span>
-
-                        <a href="#" target="_blank" rel="noopener">
+<a href="#" rel="noopener" target="_blank">
                             @stil.beauty
                         </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- WORKING HOURS -->
-
-                <div class="contact-detail">
-
-                    <div class="contact-detail-icon">
+</div>
+</div>
+<!-- WORKING HOURS -->
+<div class="contact-detail">
+<div class="contact-detail-icon">
                         ◷
                     </div>
-
-                    <div>
-
-                        <span>
+<div>
+<span>
                             Radno vreme
                         </span>
-
-                        <strong>
+<strong>
                             Pon – Pet
                         </strong>
-
-                        <p>
+<p>
                             09:00 – 19:00
                         </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="contact-social-note">
-
-                <span>
+</div>
+</div>
+</div>
+<div class="contact-social-note">
+<span>
                     ✦
                 </span>
-
-                <p>
+<p>
                     Za najbrži odgovor pošalji nam poruku
                     ili nas pozovi direktno.
                 </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
+</div>
+</div>
+<!-- =================================================
              BOOKING FORM
         ================================================== -->
-
-        <div
-            class="contact-form-wrapper reveal"
-            id="zakazivanje"
-        >
-
-            <div class="contact-form-header">
-
-                <span class="section-kicker">
+<div class="contact-form-wrapper reveal" id="zakazivanje">
+<div class="contact-form-header">
+<span class="section-kicker">
                     ZAKAŽI TERMIN
                 </span>
-
-
-                <h2>
+<h2>
                     Rezerviši svoje
                     <em>vreme.</em>
-                </h2>
-
-
-                <p>
+</h2>
+<p>
                     Popuni formu i javićemo ti se radi
                     potvrde termina.
                 </p>
-
-            </div>
-
-
-            <form
-                class="contact-form"
-                id="contactForm"
-                action="#"
-                method="POST"
-            >
-
-
-                <!-- NAME -->
-
-                <div class="form-group">
-
-                    <label for="name">
+</div>
+<form action="#" class="contact-form" id="contactForm" method="POST">
+<!-- NAME -->
+<div class="form-group">
+<label for="name">
                         Ime i prezime
                     </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Tvoje ime"
-                        autocomplete="name"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- PHONE -->
-
-                <div class="form-group">
-
-                    <label for="phone">
+<input autocomplete="name" id="name" name="name" placeholder="Tvoje ime" required="" type="text"/>
+</div>
+<!-- PHONE -->
+<div class="form-group">
+<label for="phone">
                         Telefon
                     </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="06X XXX XXXX"
-                        autocomplete="tel"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="email">
+<input autocomplete="tel" id="phone" name="phone" placeholder="06X XXX XXXX" required="" type="tel"/>
+</div>
+<!-- EMAIL -->
+<div class="form-group">
+<label for="email">
                         E-mail
                     </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="tvoj@email.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- SERVICE -->
-
-                <div class="form-group">
-
-                    <label for="service">
+<input autocomplete="email" id="email" name="email" placeholder="tvoj@email.com" required="" type="email"/>
+</div>
+<!-- SERVICE -->
+<div class="form-group">
+<label for="service">
                         Željena usluga
                     </label>
-
-                    <select
-                        id="service"
-                        name="service"
-                        required
-                    >
-
-                        <option value="" selected disabled>
+<select id="service" name="service" required="">
+<option disabled="" selected="" value="">
                             Učitavanje usluga...
                         </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- DATE -->
-
-                <div class="form-group">
-
-                    <label for="date">
+</select>
+</div>
+<!-- DATE -->
+<div class="form-group">
+<label for="date">
                         Željeni datum
                     </label>
-
-                    <input
-                        type="date"
-                        id="date"
-                        name="date"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- TIME SLOTS -->
-
-                <div class="form-group" id="timeSlotsGroup" style="display:none;">
-
-                    <label>
+<input id="date" name="date" required="" type="date"/>
+</div>
+<!-- TIME SLOTS -->
+<div class="form-group" id="timeSlotsGroup" style="display:none;">
+<label>
                         Slobodni termini
                     </label>
-
-                    <div class="time-slots" id="timeSlots"></div>
-
-                    <input type="hidden" id="selectedTime" name="time">
-                    <input type="hidden" id="selectedEmployee" name="employee_id">
-
-                </div>
-
-
-                <!-- MESSAGE -->
-
-                <div class="form-group">
-
-                    <label for="message">
+<div class="time-slots" id="timeSlots"></div>
+<input id="selectedTime" name="time" type="hidden"/>
+<input id="selectedEmployee" name="employee_id" type="hidden"/>
+</div>
+<!-- MESSAGE -->
+<div class="form-group">
+<label for="message">
                         Poruka
                         <span>
                             opcionalno
                         </span>
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Ako želiš, napiši nam nešto više..."
-                    ></textarea>
-
-                </div>
-
-
-                <!-- CONSENT -->
-
-                <div class="form-checkbox">
-
-                    <input
-                        type="checkbox"
-                        id="privacy"
-                        name="privacy"
-                        required
-                    >
-
-                    <label for="privacy">
+</label>
+<textarea id="message" name="message" placeholder="Ako želiš, napiši nam nešto više..." rows="5"></textarea>
+</div>
+<!-- CONSENT -->
+<div class="form-checkbox">
+<input id="privacy" name="privacy" required="" type="checkbox"/>
+<label for="privacy">
 
                         Slažem se da STIL može da me kontaktira
                         povodom ovog zahteva.
 
                     </label>
-
-                </div>
-
-
-                <!-- SUBMIT -->
-
-                <button
-                    type="submit"
-                    class="btn btn-primary form-submit"
-                >
+</div>
+<!-- SUBMIT -->
+<button class="btn btn-primary form-submit" type="submit">
 
                     Pošalji zahtev
 
                     <span>
                         →
                     </span>
-
-                </button>
-
-
-                <!-- FORM MESSAGE -->
-
-                <div
-                    class="form-message"
-                    id="formMessage"
-                    role="status"
-                    aria-live="polite"
-                ></div>
-
-            </form>
-
-        </div>
-
-    </div>
-
+</button>
+<!-- FORM MESSAGE -->
+<div aria-live="polite" class="form-message" id="formMessage" role="status"></div>
+</form>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      MAP / LOCATION
 ========================================================= -->
-
-<section class="location-section section">
-
-    <div class="container">
-
-        <div class="location-card reveal">
-
-
-            <div class="location-content">
-
-                <span class="section-kicker">
+<section class="location-section section" id="vidimo-se-u-stil-u">
+<div class="container">
+<div class="location-card reveal">
+<div class="location-content">
+<span class="section-kicker">
                     PRONAĐI NAS
                 </span>
-
-
-                <h2>
+<h2>
                     Vidimo se
                     <em>u STIL-u.</em>
-                </h2>
-
-
-                <p>
+</h2>
+<p>
                     Naša tačna lokacija može biti prikazana
                     ovde putem Google Maps mape.
                 </p>
-
-
-                <a
-                    href="#"
-                    class="btn btn-outline"
-                    target="_blank"
-                    rel="noopener"
-                >
+<a class="btn btn-outline" href="#" rel="noopener" target="_blank">
 
                     Otvori mapu
 
                     <span>
                         ↗
                     </span>
-
-                </a>
-
-            </div>
-
-
-            <div class="map-placeholder">
-
-                <div class="map-pin">
+</a>
+</div>
+<div class="map-placeholder">
+<div class="map-pin">
                     ✦
                 </div>
-
-
-                <span class="map-label">
+<span class="map-label">
                     STIL
                 </span>
-
-
-                <span class="map-address">
+<span class="map-address">
                     Ulica i broj
                 </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      FAQ
 ========================================================= -->
-
-<section class="faq-section section">
-
-    <div class="container">
-
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
+<section class="faq-section section" id="pre-nego-sto-dodjes">
+<div class="container">
+<div class="section-heading centered reveal">
+<span class="section-kicker">
                 ČESTA PITANJA
             </span>
-
-
-            <h2>
+<h2>
                 Pre nego što
                 <em>dođeš.</em>
-            </h2>
-
-        </div>
-
-
-        <div class="faq-list">
-
-
-            <!-- FAQ 1 -->
-
-            <div class="faq-item reveal">
-
-                <button
-                    class="faq-question"
-                    type="button"
-                    aria-expanded="false"
-                >
-
-                    <span>
+</h2>
+</div>
+<div class="faq-list">
+<!-- FAQ 1 -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question" type="button">
+<span>
                         Da li je potrebno zakazivanje?
                     </span>
-
-                    <span class="faq-icon">
+<span class="faq-icon">
                         +
                     </span>
-
-                </button>
-
-
-                <div class="faq-answer">
-
-                    <p>
+</button>
+<div class="faq-answer">
+<p>
                         Da. Preporučujemo da termin rezervišeš
                         unapred kako bismo mogli da ti posvetimo
                         dovoljno vremena.
                     </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- FAQ 2 -->
-
-            <div class="faq-item reveal">
-
-                <button
-                    class="faq-question"
-                    type="button"
-                    aria-expanded="false"
-                >
-
-                    <span>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question" type="button">
+<span>
                         Kako mogu da pomerim termin?
                     </span>
-
-                    <span class="faq-icon">
+<span class="faq-icon">
                         +
                     </span>
-
-                </button>
-
-
-                <div class="faq-answer">
-
-                    <p>
+</button>
+<div class="faq-answer">
+<p>
                         Pozovi nas ili pošalji poruku čim znaš
                         da nećeš moći da dođeš u zakazano vreme.
                     </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- FAQ 3 -->
-
-            <div class="faq-item reveal">
-
-                <button
-                    class="faq-question"
-                    type="button"
-                    aria-expanded="false"
-                >
-
-                    <span>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question" type="button">
+<span>
                         Ne znam koji tretman mi treba.
                     </span>
-
-                    <span class="faq-icon">
+<span class="faq-icon">
                         +
                     </span>
-
-                </button>
-
-
-                <div class="faq-answer">
-
-                    <p>
+</button>
+<div class="faq-answer">
+<p>
                         Nema problema. Napiši nam šta želiš da
                         postigneš i pomoći ćemo ti da izabereš
                         odgovarajući tretman.
                     </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- FAQ 4 -->
-
-            <div class="faq-item reveal">
-
-                <button
-                    class="faq-question"
-                    type="button"
-                    aria-expanded="false"
-                >
-
-                    <span>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question" type="button">
+<span>
                         Da li mogu da zakažem više usluga?
                     </span>
-
-                    <span class="faq-icon">
+<span class="faq-icon">
                         +
                     </span>
-
-                </button>
-
-
-                <div class="faq-answer">
-
-                    <p>
+</button>
+<div class="faq-answer">
+<p>
                         Naravno. U poruci samo napiši koje usluge
                         želiš da kombinuješ, pa ćemo zajedno
                         pronaći odgovarajući termin.
                     </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
 <!-- =========================================================
      FINAL CTA
 ========================================================= -->
-
-<section class="cta-section section">
-
-    <div class="container">
-
-        <div class="cta-box reveal">
-
-            <div class="cta-decoration">
+<section class="cta-section section" id="vidimo-se-uskoro">
+<div class="container">
+<div class="cta-box reveal">
+<div class="cta-decoration">
                 ♡
             </div>
-
-
-            <span class="section-kicker">
+<span class="section-kicker">
                 STIL BEAUTY
             </span>
-
-
-            <h2>
+<h2>
                 Vidimo se
                 <em>uskoro.</em>
-            </h2>
-
-
-            <p>
+</h2>
+<p>
                 Jedan termin. Malo vremena za sebe.
                 I malo više STIL-a.
             </p>
-
-
-            <a
-                href="#zakazivanje"
-                class="btn btn-primary"
-            >
+<a class="btn btn-primary" href="#zakazivanje">
 
                 Zakaži termin
 
                 <span>
                     ↑
                 </span>
-
-            </a>
-
-        </div>
-
-    </div>
-
+</a>
+</div>
+</div>
 </section>
-
 </main>
-
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
-
 <footer class="site-footer">
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="footer-logo">
-
-                    <span>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="footer-logo" href="index.html">
+<span>
                         STIL
                     </span>
-
-                    <small>
-                        beauty & care
+<small>
+                        beauty &amp; care
                     </small>
-
-                </a>
-
-
-                <p>
+</a>
+<p>
                     Nega i lepota,
-                    sa pažnjom za detalj.
+                    na svoj način.
                 </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
+</div>
+<div class="footer-column">
+<h4>
                     Navigacija
                 </h4>
-
-                <a href="index.html">
+<a href="index.html">
                     Početna
                 </a>
-
-                <a href="usluge.html">
+<a href="usluge.html">
                     Usluge
                 </a>
-
-                <a href="galerija.html">
+<a href="galerija.html">
                     Galerija
                 </a>
-
-                <a href="o-nama.html">
+<a href="o-nama.html">
                     O nama
                 </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
+</div>
+<div class="footer-column">
+<h4>
                     Usluge
                 </h4>
-
-                <a href="nega-lica.html">
+<a href="nega-lica.html">
                     Nega lica
                 </a>
-
-                <a href="nokti.html">
-                    Nokti & manikir
+<a href="nokti.html">
+                    Nokti &amp; manikir
                 </a>
-
-                <a href="pedikir.html">
+<a href="pedikir.html">
                     Pedikir
                 </a>
-
-                <a href="obrve-trepavice.html">
-                    Obrve & trepavice
+<a href="obrve-trepavice.html">
+                    Obrve &amp; trepavice
                 </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
+</div>
+<div class="footer-column">
+<h4>
                     Kontakt
                 </h4>
-
-                <p>
+<p>
                     Adresa salona
                 </p>
-
-                <a href="tel:+381000000000">
+<a href="tel:+381000000000">
                     +381 00 000 0000
                 </a>
-
-                <a href="#">
+<a href="#">
                     Instagram
                 </a>
-
-                <a href="kontakt.html">
+<a href="kontakt.html">
                     Zakaži termin
                 </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
                 © 2026 STIL Beauty Salon
             </span>
-
-            <span>
+<span>
                 Made with care.
             </span>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </footer>
-
-
 <script src="js_main.js"></script>
-
 </body>
 </html>
