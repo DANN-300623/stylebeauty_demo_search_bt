@@ -4,6 +4,16 @@
 ========================================================= */
 
 /* =====================================================
+   BACKEND ADRESA
+   Dok testiraš lokalno (XAMPP), ostavi kako jeste.
+   Kad sajt bude na pravom hostingu, promeni ovo u
+   pravu adresu foldera sa PHP fajlovima, npr.:
+   "https://tvoj-domen.rs/booking"
+===================================================== */
+
+const API_BASE = "http://localhost/salon_booking";
+
+/* =====================================================
    SEARCH INDEX — sadržaj svih stranica za pretragu
 ===================================================== */
 
@@ -442,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       09. CONTACT FORM
+       09. CONTACT FORM (zakazivanje povezano sa bazom)
     ===================================================== */
 
     const contactForm =
@@ -452,121 +462,269 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (contactForm) {
 
+        const serviceSelect = contactForm.querySelector('[name="service"]');
+        const dateInput = contactForm.querySelector('[name="date"]');
+        const timeSlotsGroup = document.getElementById("timeSlotsGroup");
+        const timeSlotsContainer = document.getElementById("timeSlots");
+        const selectedTimeInput = document.getElementById("selectedTime");
+        const selectedEmployeeInput = document.getElementById("selectedEmployee");
+        const submitBtn = contactForm.querySelector('.form-submit');
+
+        // Danas kao najraniji moguci datum
+        if (dateInput) {
+            dateInput.min = new Date().toISOString().split("T")[0];
+        }
+
+        const nazivKategorije = {
+            "nega-lica": "Nega lica",
+            "nokti": "Nokti",
+            "pedikir": "Pedikir",
+            "obrve-trepavice": "Obrve i trepavice"
+        };
+
+        /* -------------------------
+           UCITAJ USLUGE U DROPDOWN
+        ------------------------- */
+
+        function ucitajUsluge() {
+
+            if (!serviceSelect) return;
+
+            fetch(API_BASE + "/get-usluge.php")
+                .then(res => res.json())
+                .then(usluge => {
+
+                    serviceSelect.innerHTML =
+                        '<option value="" selected disabled>Izaberi uslugu</option>';
+
+                    const grupe = {};
+
+                    usluge.forEach(u => {
+                        if (!grupe[u.kategorija]) grupe[u.kategorija] = [];
+                        grupe[u.kategorija].push(u);
+                    });
+
+                    Object.keys(grupe).forEach(kategorija => {
+
+                        const optgroup = document.createElement("optgroup");
+                        optgroup.label = nazivKategorije[kategorija] || kategorija;
+
+                        grupe[kategorija].forEach(u => {
+
+                            const option = document.createElement("option");
+                            option.value = u.id;
+                            option.textContent =
+                                u.naziv + " — " + u.cena.toLocaleString("sr-RS") + " RSD";
+
+                            optgroup.appendChild(option);
+
+                        });
+
+                        serviceSelect.appendChild(optgroup);
+
+                    });
+
+                })
+                .catch(() => {
+
+                    serviceSelect.innerHTML =
+                        '<option value="" selected disabled>Greška pri učitavanju usluga</option>';
+
+                });
+
+        }
+
+        ucitajUsluge();
+
+
+        /* -------------------------
+           UCITAJ SLOBODNE TERMINE
+        ------------------------- */
+
+        function ucitajSlobodneTermine() {
+
+            if (!serviceSelect || !dateInput || !timeSlotsGroup || !timeSlotsContainer) return;
+
+            const uslugaId = serviceSelect.value;
+            const datum = dateInput.value;
+
+            selectedTimeInput.value = "";
+            selectedEmployeeInput.value = "";
+
+            if (!uslugaId || !datum) {
+                timeSlotsGroup.style.display = "none";
+                return;
+            }
+
+            timeSlotsGroup.style.display = "block";
+            timeSlotsContainer.innerHTML =
+                '<span class="time-slots-loading">Učitavanje termina...</span>';
+
+            fetch(API_BASE + "/get-slobodni-termini.php?usluga_id=" + uslugaId + "&datum=" + datum)
+                .then(res => res.json())
+                .then(termini => {
+
+                    if (!Array.isArray(termini) || termini.length === 0) {
+
+                        timeSlotsContainer.innerHTML =
+                            '<span class="time-slots-empty">Nema slobodnih termina za taj datum. Probaj drugi dan.</span>';
+
+                        return;
+
+                    }
+
+                    timeSlotsContainer.innerHTML = "";
+
+                    termini.forEach(t => {
+
+                        const dugme = document.createElement("button");
+                        dugme.type = "button";
+                        dugme.className = "time-slot";
+                        dugme.textContent = t.vreme;
+                        dugme.dataset.vreme = t.vreme;
+                        dugme.dataset.zaposleniId = t.zaposleni_id;
+
+                        dugme.addEventListener("click", () => {
+
+                            timeSlotsContainer
+                                .querySelectorAll(".time-slot")
+                                .forEach(el => el.classList.remove("selected"));
+
+                            dugme.classList.add("selected");
+
+                            selectedTimeInput.value = t.vreme;
+                            selectedEmployeeInput.value = t.zaposleni_id;
+
+                        });
+
+                        timeSlotsContainer.appendChild(dugme);
+
+                    });
+
+                })
+                .catch(() => {
+
+                    timeSlotsContainer.innerHTML =
+                        '<span class="time-slots-empty">Greška pri učitavanju termina.</span>';
+
+                });
+
+        }
+
+        if (serviceSelect) serviceSelect.addEventListener("change", ucitajSlobodneTermine);
+        if (dateInput) dateInput.addEventListener("change", ucitajSlobodneTermine);
+
+
+        /* -------------------------
+           SLANJE FORME
+        ------------------------- */
+
         contactForm.addEventListener(
             "submit",
             event => {
 
                 event.preventDefault();
 
-                const name =
-                    contactForm.querySelector(
-                        '[name="name"]'
-                    );
+                const name = contactForm.querySelector('[name="name"]');
+                const phone = contactForm.querySelector('[name="phone"]');
+                const email = contactForm.querySelector('[name="email"]');
+                const privacy = contactForm.querySelector('[name="privacy"]');
+                const message = contactForm.querySelector(".form-message");
 
-                const phone =
-                    contactForm.querySelector(
-                        '[name="phone"]'
-                    );
-
-                const service =
-                    contactForm.querySelector(
-                        '[name="service"]'
-                    );
-
-                const message =
-                    contactForm.querySelector(
-                        ".form-message"
-                    );
-
-                let valid = true;
-
-                /* -------------------------
-                   NAME
-                ------------------------- */
-
-                if (
-                    name &&
-                    name.value.trim().length < 2
-                ) {
-
+                if (name && name.value.trim().length < 2) {
                     name.focus();
-
-                    valid = false;
-
-                    showFormMessage(
-                        message,
-                        "Molimo unesite ime.",
-                        true
-                    );
-
+                    showFormMessage(message, "Molimo unesite ime.", true);
                     return;
-
                 }
 
-
-                /* -------------------------
-                   PHONE
-                ------------------------- */
-
-                if (
-                    phone &&
-                    phone.value.trim().length < 5
-                ) {
-
+                if (phone && phone.value.trim().length < 5) {
                     phone.focus();
-
-                    valid = false;
-
-                    showFormMessage(
-                        message,
-                        "Molimo unesite broj telefona.",
-                        true
-                    );
-
+                    showFormMessage(message, "Molimo unesite broj telefona.", true);
                     return;
-
                 }
 
-
-                /* -------------------------
-                   SERVICE
-                ------------------------- */
-
-                if (
-                    service &&
-                    service.value === ""
-                ) {
-
-                    service.focus();
-
-                    valid = false;
-
-                    showFormMessage(
-                        message,
-                        "Molimo izaberite uslugu.",
-                        true
-                    );
-
+                if (email && !email.checkValidity()) {
+                    email.focus();
+                    showFormMessage(message, "Molimo unesite ispravnu e-mail adresu.", true);
                     return;
-
                 }
 
+                if (serviceSelect && serviceSelect.value === "") {
+                    serviceSelect.focus();
+                    showFormMessage(message, "Molimo izaberite uslugu.", true);
+                    return;
+                }
 
-                if (!valid) return;
+                if (!dateInput.value) {
+                    dateInput.focus();
+                    showFormMessage(message, "Molimo izaberite datum.", true);
+                    return;
+                }
 
+                if (!selectedTimeInput.value || !selectedEmployeeInput.value) {
+                    showFormMessage(message, "Molimo izaberite jedan od slobodnih termina.", true);
+                    return;
+                }
 
-                /* -------------------------
-                   SUCCESS
-                ------------------------- */
+                if (privacy && !privacy.checked) {
+                    showFormMessage(message, "Potrebna je saglasnost za kontaktiranje.", true);
+                    return;
+                }
 
-                showFormMessage(
-                    message,
-                    "Hvala! Vaš zahtev je zabeležen. Salon će vas kontaktirati.",
-                    false
-                );
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.style.opacity = "0.6";
+                }
 
+                const podaci = {
+                    name: name.value.trim(),
+                    phone: phone.value.trim(),
+                    email: email.value.trim(),
+                    service_id: serviceSelect.value,
+                    date: dateInput.value,
+                    time: selectedTimeInput.value,
+                    employee_id: selectedEmployeeInput.value,
+                    message: contactForm.querySelector('[name="message"]').value.trim(),
+                    privacy: privacy.checked
+                };
 
-                contactForm.reset();
+                fetch(API_BASE + "/obradi-zakazivanje.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(podaci)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+
+                        showFormMessage(message, data.poruka, !data.uspeh);
+
+                        if (data.uspeh) {
+
+                            contactForm.reset();
+
+                            if (timeSlotsGroup) timeSlotsGroup.style.display = "none";
+                            if (timeSlotsContainer) timeSlotsContainer.innerHTML = "";
+
+                        }
+
+                    })
+                    .catch(() => {
+
+                        showFormMessage(
+                            message,
+                            "Došlo je do greške. Proveri konekciju i pokušaj ponovo.",
+                            true
+                        );
+
+                    })
+                    .finally(() => {
+
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.style.opacity = "1";
+                        }
+
+                    });
 
             }
         );

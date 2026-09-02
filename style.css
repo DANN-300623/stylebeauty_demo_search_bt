@@ -3425,6 +3425,56 @@ strong {
 }
 
 
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.time-slot {
+    padding: 9px 14px;
+
+    border: 1px solid rgba(61,57,52,0.18);
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        border-color var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.time-slot:hover {
+    border-color: var(--gold);
+}
+
+
+.time-slot.selected {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+
+    color: var(--white);
+}
+
+
+.time-slots-empty,
+.time-slots-loading {
+    font-size: 13px;
+
+    color: var(--text-light);
+}
+
+
 .form-checkbox {
     display: flex;
 
